@@ -58,7 +58,6 @@ namespace MMSE_project.QuestionForms
 
             base.QuestionTitle = "Part 1: Please answer the time questions:";
             base.PartNumber = "Part 1:";
-            //   base.timerForQuestion.Start();
 
             FillComboBoxData();
             

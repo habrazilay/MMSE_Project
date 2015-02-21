@@ -111,10 +111,10 @@ namespace MMSE_project.QuestionForms
 
         public override void NextButtonClick()
         {
-            // Go to the next screen - 
-         /*   NounLabelsForm nounLabelsForm = new NounLabelsForm();
+            // Go to the next screen - TimesConvertQuestionForm
+            TimesConvertQuestionForm timesConvertQuestionForm = new TimesConvertQuestionForm();
             this.Hide();
-            nounLabelsForm.Show(); */
+            timesConvertQuestionForm.Show();
         }
 
         #endregion

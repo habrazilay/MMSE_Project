@@ -31,7 +31,6 @@ namespace MMSE_project.QuestionForms
             Competition = 10
         };
 
-      //   List<string> nounsList = GlobalClass.GetNounsList();
         private int wordNumber    = 0;
         private int secoundNumber = MAX_SECOUNDS;
 
@@ -46,12 +45,14 @@ namespace MMSE_project.QuestionForms
 
             InitializeComponent();
 
-            lblTitle.Text = "Part 3: Please try to remember the nouns that appear on the screen. Every 10 seconds noun changed.";
+            lblExplain.Visible = true;
+            lblNoun.Visible = false;
 
-            SetNounLabel(wordNumber);
-            wordsTimer.Enabled = true;
-            wordsTimer.Interval = 1000;
-            wordsTimer.Start();
+            lblExplain.Text = @"It's going to appear on the screen three objects.\r\When it finished, Please repeat them.\r\ " +
+                               "Remember what they are because you will name them again in a few minutes. ";
+ 
+            explainTimer.Enabled = true;
+            explainTimer.Start();
         }
 
         /// <summary>
@@ -105,6 +106,25 @@ namespace MMSE_project.QuestionForms
 
         #region Events
 
+
+        /// <summary>
+        /// Event that append after the first 10 secounds - 10 seconds for explaination.
+        /// </summary>
+        private void explainTimer_Tick(object sender, EventArgs e)
+        {
+            lblExplain.Visible = false;
+            lblNoun.Visible = true;
+            explainTimer.Stop();
+
+            lblTitle.Text = @"Part 3: It's going to appear on the screen three objects.\r\ When it finished, Please repeat them.\r\ " +
+                            "Remember what they are because you will name them again in a few minutes. ";
+
+            SetNounLabel(wordNumber);
+            wordsTimer.Enabled = true;
+            wordsTimer.Interval = 1000;
+            wordsTimer.Start();
+        }
+
         /// <summary>
         /// Event that append evety 10 secounds - Set the next noun on label/Change Form after 3 nouns
         /// </summary>
@@ -136,5 +156,6 @@ namespace MMSE_project.QuestionForms
         }
 
         #endregion
+
     }
 }

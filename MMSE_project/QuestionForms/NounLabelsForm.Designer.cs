@@ -34,7 +34,9 @@
             this.wordsTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlNoun = new System.Windows.Forms.Panel();
             this.lblNoun = new System.Windows.Forms.Label();
+            this.lblExplain = new System.Windows.Forms.Label();
             this.lblTimeLeft = new System.Windows.Forms.Label();
+            this.explainTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlNoun.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,12 +51,14 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Location = new System.Drawing.Point(463, 21);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(72, 13);
+            this.lblTitle.Size = new System.Drawing.Size(0, 13);
             this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "Question Title";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // wordsTimer
@@ -68,6 +72,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlNoun.Controls.Add(this.lblNoun);
+            this.pnlNoun.Controls.Add(this.lblExplain);
             this.pnlNoun.Location = new System.Drawing.Point(0, 86);
             this.pnlNoun.Name = "pnlNoun";
             this.pnlNoun.Size = new System.Drawing.Size(984, 376);
@@ -75,7 +80,9 @@
             // 
             // lblNoun
             // 
-            this.lblNoun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblNoun.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNoun.AutoSize = true;
             this.lblNoun.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblNoun.Location = new System.Drawing.Point(405, 158);
@@ -84,15 +91,36 @@
             this.lblNoun.TabIndex = 0;
             this.lblNoun.Text = "NOUN";
             // 
+            // lblExplain
+            // 
+            this.lblExplain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExplain.AutoSize = true;
+            this.lblExplain.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblExplain.Location = new System.Drawing.Point(405, 158);
+            this.lblExplain.Name = "lblExplain";
+            this.lblExplain.Size = new System.Drawing.Size(5000, 73);
+            this.lblExplain.TabIndex = 0;
+            this.lblExplain.Text = "It\'s going to appear on the screen three objects.\\r\\ When it finished, Please rep" +
+    "eat them.\\r\\ Remember what they are because you will name them again in a few mi" +
+    "nutes. ";
+            // 
             // lblTimeLeft
             // 
+            this.lblTimeLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTimeLeft.AutoSize = true;
             this.lblTimeLeft.Location = new System.Drawing.Point(463, 47);
             this.lblTimeLeft.Name = "lblTimeLeft";
-            this.lblTimeLeft.Size = new System.Drawing.Size(72, 13);
+            this.lblTimeLeft.Size = new System.Drawing.Size(0, 13);
             this.lblTimeLeft.TabIndex = 7;
-            this.lblTimeLeft.Text = "Question Title";
             this.lblTimeLeft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // explainTimer
+            // 
+            this.explainTimer.Interval = 10000;
+            this.explainTimer.Tick += new System.EventHandler(this.explainTimer_Tick);
             // 
             // NounLabelsForm
             // 
@@ -119,6 +147,8 @@
         private System.Windows.Forms.Timer wordsTimer;
         private System.Windows.Forms.Panel pnlNoun;
         private System.Windows.Forms.Label lblNoun;
+        private System.Windows.Forms.Label lblExplain;
         protected System.Windows.Forms.Label lblTimeLeft;
+        private System.Windows.Forms.Timer explainTimer;
     }
 }
