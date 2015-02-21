@@ -70,7 +70,6 @@
             this.pbBrain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBrain.TabIndex = 2;
             this.pbBrain.TabStop = false;
-            this.pbBrain.Click += new System.EventHandler(this.pbBrain_Click);
             // 
             // btnStart
             // 

@@ -99,7 +99,6 @@ namespace MMSE_project.QuestionForms
             // pbSecondNounImage
             // 
             this.pbSecondNounImage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pbSecondNounImage.Image = global::MMSE_project.Properties.Resources.cat;
             this.pbSecondNounImage.Location = new System.Drawing.Point(352, 103);
             this.pbSecondNounImage.Name = "pbSecondNounImage";
             this.pbSecondNounImage.Size = new System.Drawing.Size(125, 94);
@@ -110,7 +109,6 @@ namespace MMSE_project.QuestionForms
             // pbThirdNounImage
             // 
             this.pbThirdNounImage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pbThirdNounImage.Image = global::MMSE_project.Properties.Resources.car;
             this.pbThirdNounImage.Location = new System.Drawing.Point(352, 203);
             this.pbThirdNounImage.Name = "pbThirdNounImage";
             this.pbThirdNounImage.Size = new System.Drawing.Size(125, 95);
@@ -121,7 +119,6 @@ namespace MMSE_project.QuestionForms
             // pbFirstNounImage
             // 
             this.pbFirstNounImage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pbFirstNounImage.Image = global::MMSE_project.Properties.Resources.ball;
             this.pbFirstNounImage.Location = new System.Drawing.Point(352, 3);
             this.pbFirstNounImage.Name = "pbFirstNounImage";
             this.pbFirstNounImage.Size = new System.Drawing.Size(125, 94);

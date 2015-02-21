@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FilesManagment.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -79,6 +80,12 @@
       <DependentUpon>TimesConvertQuestionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="QuizPerUser.cs" />
+    <Compile Include="ResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultsForm.Designer.cs">
+      <DependentUpon>ResultsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\MandatoryComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +163,9 @@
     <EmbeddedResource Include="QuestionForms\NounQuestionForm.resx">
       <DependentUpon>NounQuestionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ResultsForm.resx">
+      <DependentUpon>ResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MandatoryComboBox.resx">
       <DependentUpon>MandatoryComboBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,13 +198,26 @@
     <Folder Include="Images\AnalogClocks\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Objects\car.png" />
+    <None Include="Images\Objects\Car.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Objects\cat.png" />
+    <None Include="Images\Objects\Cat.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Objects\ball.png" />
+    <None Include="Images\Objects\Ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Objects\sun.png" />
+    <None Include="Images\Objects\house.png" />
+    <None Include="Images\Objects\horse.png" />
+    <None Include="Images\Objects\hat.png" />
+    <None Include="Images\Objects\hammer.png" />
+    <None Include="Images\Objects\book.png" />
+    <None Include="Images\Objects\banana.png" />
+    <None Include="Resources\Cat.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResultsFile.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

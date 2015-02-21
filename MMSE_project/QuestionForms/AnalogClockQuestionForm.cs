@@ -46,7 +46,7 @@ namespace MMSE_project.QuestionForms
         /// </summary>
         public override int GetQuestionNumber()
         {
-            return 8;
+            return 7;
         }
 
         /// <summary>

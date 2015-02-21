@@ -16,7 +16,7 @@ namespace MMSE_project.QuestionForms
         {
             InitializeComponent();
             base.PartNumber = "Part 5:";
-            base.QuestionTitle = "Please enter the nouns you that appears in part 3";
+            base.QuestionTitle = "Please enter the three objects that asked you to remember in part 3:";
         }
 
         #region Ovveride Methods

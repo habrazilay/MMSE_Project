@@ -71,7 +71,7 @@ namespace MMSE_project
 
         public void FinishQuiz()
         {
-
+            QuizPerUser.FinishQuiz();
         }
 
         /// <summary>
@@ -106,6 +106,8 @@ namespace MMSE_project
             if (CheckValidation())
             {
                 stopwatch.Stop();
+
+                QuestionResult.QuestionNumber = GetQuestionNumber();
                 QuestionResult.Score = CheckAnswers();
                 QuestionResult.TimeToQuestion = stopwatch.Elapsed;
 

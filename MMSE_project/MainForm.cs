@@ -40,7 +40,6 @@ namespace MMSE_project
     
             if((char)m10 == CheckDigit)
             {
-                QuizPerUser.userID = userId;
                 return true;
             }
             else
@@ -78,7 +77,7 @@ namespace MMSE_project
             // Check if the entered ID is correct.
             if (ValidateUserID())
             {
-                QuizPerUser.quizStartTime = DateTime.Now;
+                QuizPerUser.StartQuiz(this.txtUserID.Text);
 
                 TimeQuestionForm questionForm = new TimeQuestionForm();
                 this.Hide();
@@ -89,11 +88,6 @@ namespace MMSE_project
                 // The user id is incorrect - show message to user to enter id again.
                 lblErrorMassage.Visible = true;
             }
-        }
-
-        private void pbBrain_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
