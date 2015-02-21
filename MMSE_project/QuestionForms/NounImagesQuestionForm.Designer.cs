@@ -1,4 +1,5 @@
-﻿namespace MMSE_project.QuestionForms
+﻿
+namespace MMSE_project.QuestionForms
 {
     partial class NounImagesQuestionForm
     {
@@ -32,13 +33,13 @@
             this.txtThrdNoun = new MMSE_project.UserControls.MandatoryTextBox();
             this.txtSecondNoun = new MMSE_project.UserControls.MandatoryTextBox();
             this.txtFirstNoun = new MMSE_project.UserControls.MandatoryTextBox();
-            this.pbFirstNounImage = new System.Windows.Forms.PictureBox();
             this.pbSecondNounImage = new System.Windows.Forms.PictureBox();
             this.pbThirdNounImage = new System.Windows.Forms.PictureBox();
+            this.pbFirstNounImage = new System.Windows.Forms.PictureBox();
             this.tlpNounsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSecondNounImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThirdNounImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNext
@@ -48,16 +49,16 @@
             // tlpNounsPanel
             // 
             this.tlpNounsPanel.ColumnCount = 4;
-            this.tlpNounsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpNounsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpNounsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlpNounsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlpNounsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpNounsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpNounsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpNounsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 261F));
             this.tlpNounsPanel.Controls.Add(this.txtThrdNoun, 2, 2);
             this.tlpNounsPanel.Controls.Add(this.txtSecondNoun, 2, 1);
-            this.tlpNounsPanel.Controls.Add(this.txtFirstNoun, 2, 0);
-            this.tlpNounsPanel.Controls.Add(this.pbFirstNounImage, 1, 0);
             this.tlpNounsPanel.Controls.Add(this.pbSecondNounImage, 1, 1);
             this.tlpNounsPanel.Controls.Add(this.pbThirdNounImage, 1, 2);
+            this.tlpNounsPanel.Controls.Add(this.pbFirstNounImage, 1, 0);
+            this.tlpNounsPanel.Controls.Add(this.txtFirstNoun, 2, 0);
             this.tlpNounsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNounsPanel.Location = new System.Drawing.Point(0, 80);
             this.tlpNounsPanel.Name = "tlpNounsPanel";
@@ -70,63 +71,63 @@
             // 
             // txtThrdNoun
             // 
-            this.txtThrdNoun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtThrdNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtThrdNoun.FieldText = "";
-            this.txtThrdNoun.Location = new System.Drawing.Point(495, 203);
+            this.txtThrdNoun.Location = new System.Drawing.Point(483, 239);
             this.txtThrdNoun.Name = "txtThrdNoun";
-            this.txtThrdNoun.Size = new System.Drawing.Size(240, 95);
+            this.txtThrdNoun.Size = new System.Drawing.Size(223, 23);
             this.txtThrdNoun.TabIndex = 5;
             // 
             // txtSecondNoun
             // 
-            this.txtSecondNoun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSecondNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtSecondNoun.FieldText = "";
-            this.txtSecondNoun.Location = new System.Drawing.Point(495, 103);
+            this.txtSecondNoun.Location = new System.Drawing.Point(483, 139);
             this.txtSecondNoun.Name = "txtSecondNoun";
-            this.txtSecondNoun.Size = new System.Drawing.Size(240, 94);
+            this.txtSecondNoun.Size = new System.Drawing.Size(223, 22);
             this.txtSecondNoun.TabIndex = 4;
             // 
             // txtFirstNoun
             // 
-            this.txtFirstNoun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFirstNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtFirstNoun.FieldText = "";
-            this.txtFirstNoun.Location = new System.Drawing.Point(495, 3);
+            this.txtFirstNoun.Location = new System.Drawing.Point(483, 39);
             this.txtFirstNoun.Name = "txtFirstNoun";
-            this.txtFirstNoun.Size = new System.Drawing.Size(240, 94);
+            this.txtFirstNoun.Size = new System.Drawing.Size(223, 21);
             this.txtFirstNoun.TabIndex = 3;
-            // 
-            // pbFirstNounImage
-            // 
-            this.pbFirstNounImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbFirstNounImage.Location = new System.Drawing.Point(249, 3);
-            this.pbFirstNounImage.Name = "pbFirstNounImage";
-            this.pbFirstNounImage.Size = new System.Drawing.Size(240, 94);
-            this.pbFirstNounImage.TabIndex = 6;
-            this.pbFirstNounImage.TabStop = false;
             // 
             // pbSecondNounImage
             // 
-            this.pbSecondNounImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbSecondNounImage.Location = new System.Drawing.Point(249, 103);
+            this.pbSecondNounImage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pbSecondNounImage.Image = global::MMSE_project.Properties.Resources.cat;
+            this.pbSecondNounImage.Location = new System.Drawing.Point(352, 103);
             this.pbSecondNounImage.Name = "pbSecondNounImage";
-            this.pbSecondNounImage.Size = new System.Drawing.Size(240, 94);
+            this.pbSecondNounImage.Size = new System.Drawing.Size(125, 94);
+            this.pbSecondNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSecondNounImage.TabIndex = 7;
             this.pbSecondNounImage.TabStop = false;
             // 
             // pbThirdNounImage
             // 
-            this.pbThirdNounImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbThirdNounImage.Location = new System.Drawing.Point(249, 203);
+            this.pbThirdNounImage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pbThirdNounImage.Image = global::MMSE_project.Properties.Resources.car;
+            this.pbThirdNounImage.Location = new System.Drawing.Point(352, 203);
             this.pbThirdNounImage.Name = "pbThirdNounImage";
-            this.pbThirdNounImage.Size = new System.Drawing.Size(240, 95);
+            this.pbThirdNounImage.Size = new System.Drawing.Size(125, 95);
+            this.pbThirdNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbThirdNounImage.TabIndex = 8;
             this.pbThirdNounImage.TabStop = false;
+            // 
+            // pbFirstNounImage
+            // 
+            this.pbFirstNounImage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pbFirstNounImage.Image = global::MMSE_project.Properties.Resources.ball;
+            this.pbFirstNounImage.Location = new System.Drawing.Point(352, 3);
+            this.pbFirstNounImage.Name = "pbFirstNounImage";
+            this.pbFirstNounImage.Size = new System.Drawing.Size(125, 94);
+            this.pbFirstNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFirstNounImage.TabIndex = 6;
+            this.pbFirstNounImage.TabStop = false;
             // 
             // NounImagesQuestionForm
             // 
@@ -143,9 +144,9 @@
             this.Controls.SetChildIndex(this.btnNext, 0);
             this.Controls.SetChildIndex(this.tlpNounsPanel, 0);
             this.tlpNounsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSecondNounImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThirdNounImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

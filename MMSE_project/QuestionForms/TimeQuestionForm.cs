@@ -138,10 +138,19 @@ namespace MMSE_project.QuestionForms
 
             // Check if day is correct
             if (thisDay.Day.ToString() == dayBox.SelectedItem.ToString())
+            {
                 score++;
-            else if ((thisDay.Day + 1 == (int)dayBox.SelectedItem) ||
-                     (thisDay.Day - 1 == (int)dayBox.SelectedItem))
+            }
+
+            else if ((thisDay.Day + 1 == Convert.ToInt32(dayBox.SelectedItem)
+                    || (thisDay.Day - 1 == Convert.ToInt32(dayBox.SelectedItem))))
+            {
                 score = score + 0.5;
+            }
+            else
+            {
+                score = score + 0;
+            }                
 
             // Check if month is correct
             string currMonth = (Enum.GetName(typeof(monthsEnum), thisDay.Month));
@@ -150,14 +159,23 @@ namespace MMSE_project.QuestionForms
                 score++;
             else if (((Enum.GetName(typeof(monthsEnum), (thisDay.Month - 1)) == monthBox.SelectedItem.ToString()) ||
                       (Enum.GetName(typeof(monthsEnum), (thisDay.Month + 1))) == monthBox.SelectedItem.ToString()))
+            {
                 score = score + 0.5;
+            }
+            else
+                score = score + 0;
 
             // Check if year s correct
             if (thisDay.Year.ToString() == yearBox.SelectedItem.ToString())
                 score++;
-            else if ((thisDay.Year + 1 == (int)yearBox.SelectedItem) ||
-                     (thisDay.Year - 1 == (int)yearBox.SelectedItem))
+            else if ((thisDay.Year + 1 == Convert.ToInt32(yearBox.SelectedItem)) ||
+                     (thisDay.Year - 1 == Convert.ToInt32(yearBox.SelectedItem)))
+            {
                 score = score + 0.5;
+            }
+                           
+            else
+                score = score + 0;
 
             // Check if seasion is correct
             // The seasons distributed by - http://www.ynet.co.il/yaan/0,7340,L-18073-PreYaan,00.html

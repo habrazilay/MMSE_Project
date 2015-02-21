@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MMSE_project.QuestionForms
 {
@@ -14,8 +15,6 @@ namespace MMSE_project.QuestionForms
     {
         #region Data Member
         #endregion
-
-
         #region Methods
 
         public NounImagesQuestionForm()
@@ -23,7 +22,8 @@ namespace MMSE_project.QuestionForms
             InitializeComponent();
 
             base.PartNumber = "Part 4:";
-            base.QuestionTitle = "There are 3 Images of nouns. Please fill the noun text in the fields belows.";
+            base.QuestionTitle = "There are 3 Images of nouns. Please fill the noun name in the fields below.";
+ 
         }
 
         #endregion

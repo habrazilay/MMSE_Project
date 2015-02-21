@@ -129,6 +129,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuestionForms\LocationQuestionForm.resx">
       <DependentUpon>LocationQuestionForm.cs</DependentUpon>
@@ -172,7 +173,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\AnalogClocks\" />
-    <Folder Include="Images\Objects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Objects\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Objects\cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Objects\ball.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
