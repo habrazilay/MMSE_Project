@@ -57,13 +57,26 @@
     <Compile Include="HistoryForm.Designer.cs">
       <DependentUpon>HistoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NounManagment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionForms\AnalogClockQuestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionForms\AnalogClockQuestionForm.Designer.cs">
+      <DependentUpon>AnalogClockQuestionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuestionForms\MathQuestionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuestionForms\MathQuestionForm.Designer.cs">
       <DependentUpon>MathQuestionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionForms\TimesConvertQuestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionForms\TimesConvertQuestionForm.Designer.cs">
+      <DependentUpon>TimesConvertQuestionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="QuizPerUser.cs" />
     <Compile Include="UserControls\MandatoryComboBox.cs">

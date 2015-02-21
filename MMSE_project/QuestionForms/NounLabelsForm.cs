@@ -63,7 +63,7 @@ namespace MMSE_project.QuestionForms
             Random random = new Random();
 
             NounsEnum randomNoun = (NounsEnum)values.GetValue(random.Next(values.Length));
-            Program.AddNounToList(randomNoun.ToString());
+            NounManagment.AddNounToList(randomNoun.ToString());
              
             bool isAllDifferentNouns = false;
 
@@ -71,10 +71,10 @@ namespace MMSE_project.QuestionForms
             {
                 randomNoun = (NounsEnum)values.GetValue(random.Next(values.Length));
 
-                if (!Program.GetNounsList().Contains(randomNoun.ToString()))
-                    Program.AddNounToList(randomNoun.ToString());
+                if (!NounManagment.GetNounsList().Contains(randomNoun.ToString()))
+                    NounManagment.AddNounToList(randomNoun.ToString());
 
-                if (Program.GetNounsList().Count == NUM_OF_NOUNS)
+                if (NounManagment.GetNounsList().Count == NUM_OF_NOUNS)
                     isAllDifferentNouns = true;
                
             } 
@@ -85,7 +85,7 @@ namespace MMSE_project.QuestionForms
         /// </summary>
         private void SetNounLabel(int index)
         {
-            lblNoun.Text = Program.GetNounsList()[index];
+            lblNoun.Text = NounManagment.GetNounsList()[index];
             this.ResumeLayout(false);
             this.PerformLayout();
         }

@@ -16,6 +16,9 @@ namespace MMSE_project
     {
         #region Data Members
 
+        private const string FINISH_TEXT = "Finish";
+        private const string NEXT_TEXT   = "Next";
+
         private QuestionResult qrQuestionResult;
         private Stopwatch      stopwatch;
 
@@ -56,6 +59,19 @@ namespace MMSE_project
             InitializeComponent();
             qrQuestionResult = new QuestionResult();
             StartStopwatch();
+        }
+
+        /// <summary>
+        /// Change next button to finish button
+        /// </summary>
+        public void ChangeButtonTextToFinish()
+        {
+            this.btnNext.Text = FINISH_TEXT;
+        }
+
+        public void FinishQuiz()
+        {
+
         }
 
         /// <summary>

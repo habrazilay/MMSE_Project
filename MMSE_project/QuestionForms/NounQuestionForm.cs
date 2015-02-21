@@ -53,13 +53,13 @@ namespace MMSE_project.QuestionForms
         {
             double score = 0;
 
-            if (Program.GetNounsList().Contains(txtFirstNoun.FieldText))
+            if (NounManagment.GetNounsList().Contains(txtFirstNoun.FieldText))
                 score++;
 
-            if (Program.GetNounsList().Contains(txtSecondNoun.FieldText))
+            if (NounManagment.GetNounsList().Contains(txtSecondNoun.FieldText))
                 score++;
 
-            if (Program.GetNounsList().Contains(txtThrdNoun.FieldText))
+            if (NounManagment.GetNounsList().Contains(txtThrdNoun.FieldText))
                 score++;
 
             return score;
