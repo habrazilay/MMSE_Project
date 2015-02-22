@@ -15,8 +15,8 @@ namespace MMSE_project.QuestionForms
         public NounQuestionForm()
         {
             InitializeComponent();
-            base.PartNumber = "Part 5:";
-            base.QuestionTitle = "Please enter the three objects that asked you to remember in part 3:";
+            base.PartNumber = "5";
+            base.QuestionTitle = "אנא הכנס את שלושת שמות העצם שהתבקשת לזכור בחלק מספר 3 (סדר ההכנסה אינו משנה).";
         }
 
         #region Ovveride Methods

@@ -39,6 +39,7 @@
             this.cmbList.FormattingEnabled = true;
             this.cmbList.Location = new System.Drawing.Point(0, 0);
             this.cmbList.Name = "cmbList";
+            this.cmbList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbList.Size = new System.Drawing.Size(171, 21);
             this.cmbList.TabIndex = 0;
             // 
@@ -46,11 +47,12 @@
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(3, 34);
+            this.lblMessage.Location = new System.Drawing.Point(15, 24);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(225, 13);
+            this.lblMessage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblMessage.Size = new System.Drawing.Size(159, 13);
             this.lblMessage.TabIndex = 1;
-            this.lblMessage.Text = "* Mandatory field. Please answer the question.";
+            this.lblMessage.Text = "*שדה חובה. אנא מלא שדה זה.";
             this.lblMessage.Visible = false;
             // 
             // MandatoryComboBox

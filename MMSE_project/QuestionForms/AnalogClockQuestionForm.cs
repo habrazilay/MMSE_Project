@@ -17,10 +17,10 @@ namespace MMSE_project.QuestionForms
 
         public AnalogClockQuestionForm()
         {
-            InitializeComponent();
+            base.QuestionTitle = "על המסך מוצג שעון אנלוגי.\r\nעליך לכתוב את השעה המוצגת על המסך (במתכונת של 12 שעות).";
+            base.PartNumber = "8";
 
-            base.QuestionTitle = "Analog clock:";
-            base.PartNumber = "Part 8:";
+            InitializeComponent();
 
             base.ChangeButtonTextToFinish();
         }

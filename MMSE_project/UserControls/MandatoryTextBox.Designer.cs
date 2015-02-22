@@ -36,11 +36,11 @@
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblMessage.Location = new System.Drawing.Point(0, 24);
+            this.lblMessage.Location = new System.Drawing.Point(66, 23);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(225, 13);
+            this.lblMessage.Size = new System.Drawing.Size(159, 13);
             this.lblMessage.TabIndex = 2;
-            this.lblMessage.Text = "* Mandatory field. Please answer the question.";
+            this.lblMessage.Text = "*שדה חובה. אנא מלא שדה זה.";
             this.lblMessage.Visible = false;
             // 
             // txtField
@@ -57,6 +57,7 @@
             this.Controls.Add(this.txtField);
             this.Controls.Add(this.lblMessage);
             this.Name = "MandatoryTextBox";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(233, 44);
             this.ResumeLayout(false);
             this.PerformLayout();

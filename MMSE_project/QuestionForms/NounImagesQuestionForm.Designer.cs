@@ -133,7 +133,7 @@ namespace MMSE_project.QuestionForms
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.tlpNounsPanel);
             this.Name = "NounImagesQuestionForm";
-            this.Text = "NounImagesQuestionForm";
+            this.Text = base.Text;
             this.Controls.SetChildIndex(this.lblPartNum, 0);
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);

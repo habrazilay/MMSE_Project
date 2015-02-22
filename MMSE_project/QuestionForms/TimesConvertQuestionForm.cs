@@ -16,10 +16,10 @@ namespace MMSE_project.QuestionForms
 
         public TimesConvertQuestionForm()
         {
-            InitializeComponent();
+            base.QuestionTitle = "על המסך מוצגת שעה הכתובה בעברית\r\nעליך לכתוב את השעה המוצגת כקלט את השעה והדקות במספרים - במתוכנת של 24 שעות.";
+            base.PartNumber = "7";
 
-            base.QuestionTitle = "Convert clock:";
-            base.PartNumber = "Part 7:";
+            InitializeComponent();
         }
 
         #endregion

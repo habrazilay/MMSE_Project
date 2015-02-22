@@ -18,10 +18,10 @@ namespace MMSE_project
         {
             InitializeComponent();
 
-            lblScore.Text = "Your final score is: " + QuizPerUser.TotalQuizScore + ".";
-            lblTime.Text = "You finish the quiz in " + QuizPerUser.TotalQuizTime.Hours + " hours, " +
-                                                       QuizPerUser.TotalQuizTime.Minutes + " minutes and " +
-                                                       QuizPerUser.TotalQuizTime.Seconds + " seconds";
+            lblScore.Text = "התוצאה הסופית שלך היא: " + QuizPerUser.TotalQuizScore + ".";
+            lblTime.Text = "סיימת מבחן זה ב " + QuizPerUser.TotalQuizTime.Hours + " שעות, " +
+                                                       QuizPerUser.TotalQuizTime.Minutes + " דקות ו" +
+                                                       QuizPerUser.TotalQuizTime.Seconds + " שניות.";
         }
 
         /// <summary>

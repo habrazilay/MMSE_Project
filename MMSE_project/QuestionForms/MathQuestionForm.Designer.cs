@@ -73,7 +73,7 @@
             this.Controls.Add(this.lblQuestion);
             this.Controls.Add(this.btnCalculate);
             this.Name = "MathQuestionForm";
-            this.Text = "MathQuestionForm";
+            this.Text = base.Text;
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);
             this.Controls.SetChildIndex(this.buttonSplitter, 0);

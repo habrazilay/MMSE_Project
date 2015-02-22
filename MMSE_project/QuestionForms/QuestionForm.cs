@@ -16,8 +16,8 @@ namespace MMSE_project
     {
         #region Data Members
 
-        private const string FINISH_TEXT = "Finish";
-        private const string NEXT_TEXT   = "Next";
+        private const string FINISH_TEXT = "סיים!";
+        private const string NEXT_TEXT   = "הבא";
 
         private QuestionResult qrQuestionResult;
         private Stopwatch      stopwatch;
@@ -40,7 +40,10 @@ namespace MMSE_project
 
         public string PartNumber
         {
-            set { this.lblPartNum.Text = value; }
+            set 
+            {
+                this.lblPartNum.Text = "חלק מספר " + value + ":"; 
+            }
         }
 
         public void StartStopwatch()

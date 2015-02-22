@@ -89,5 +89,10 @@ namespace MMSE_project
                 lblErrorMassage.Visible = true;
             }
         }
+
+        private void pbBrain_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

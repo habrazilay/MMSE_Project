@@ -17,19 +17,8 @@ namespace MMSE_project.QuestionForms
         private const int NUM_OF_NOUNS = 3;
         private const int MAX_SECOUNDS = 10;
 
-        private enum NounsEnum
-        {
-            Table = 1,
-            Girl = 2,
-            Bell = 3,
-            Key = 4,
-            Picture = 5,
-            Avocado = 6,
-            Basketball = 7,
-            Kitchen = 8,
-            Wednesday = 9,
-            Competition = 10
-        };
+        private List<string> nounsList = new List<string>(new string[] { "כסא", "ילדה", "פעמון", "מפתח", "תמונה",
+                                                                         "אבוקדו", "כדורסל", "מטבח", "שבת", "תחרות" });
 
         private int wordNumber    = 0;
         private int secoundNumber = MAX_SECOUNDS;
@@ -48,9 +37,6 @@ namespace MMSE_project.QuestionForms
             lblExplain.Visible = true;
             lblNoun.Visible = false;
 
-            lblExplain.Text = @"It's going to appear on the screen three objects.\r\When it finished, Please repeat them.\r\ " +
-                               "Remember what they are because you will name them again in a few minutes. ";
- 
             explainTimer.Enabled = true;
             explainTimer.Start();
         }
@@ -60,20 +46,18 @@ namespace MMSE_project.QuestionForms
         /// </summary>
         private void randomNouns()
         {
-            Array values = Enum.GetValues(typeof(NounsEnum));
+         //   Array values = Enum.GetValues(typeof(NounsEnum));
             Random random = new Random();
 
-            NounsEnum randomNoun = (NounsEnum)values.GetValue(random.Next(values.Length));
-            NounManagment.AddNounToList(randomNoun.ToString());
-             
+            string randomNoun = nounsList[random.Next(nounsList.Count)];  
             bool isAllDifferentNouns = false;
 
             while (!isAllDifferentNouns)
             {
-                randomNoun = (NounsEnum)values.GetValue(random.Next(values.Length));
+                randomNoun = nounsList[random.Next(nounsList.Count)];
 
-                if (!NounManagment.GetNounsList().Contains(randomNoun.ToString()))
-                    NounManagment.AddNounToList(randomNoun.ToString());
+                if (!NounManagment.GetNounsList().Contains(randomNoun))
+                    NounManagment.AddNounToList(randomNoun);
 
                 if (NounManagment.GetNounsList().Count == NUM_OF_NOUNS)
                     isAllDifferentNouns = true;
@@ -116,8 +100,8 @@ namespace MMSE_project.QuestionForms
             lblNoun.Visible = true;
             explainTimer.Stop();
 
-            lblTitle.Text = @"Part 3: It's going to appear on the screen three objects.\r\ When it finished, Please repeat them.\r\ " +
-                            "Remember what they are because you will name them again in a few minutes. ";
+            lblTitle.Text = "חלק מספר 3:\r\nיופיעו על המסך 3 שמות עצם, אחד אחרי השני, כל אחד למשך 10 שניות בלבד.\r\nעליך לשנן ש" +
+                            "מות עצם אלו ולזכור אותם כי\r\nבהמשך השאלון תדרש לכתוב את שלושת שמות עצם אלו.";
 
             SetNounLabel(wordNumber);
             wordsTimer.Enabled = true;

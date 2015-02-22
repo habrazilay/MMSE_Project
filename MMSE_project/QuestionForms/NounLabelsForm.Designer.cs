@@ -51,8 +51,7 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Location = new System.Drawing.Point(463, 21);
@@ -93,27 +92,26 @@
             // 
             // lblExplain
             // 
-            this.lblExplain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblExplain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExplain.AutoSize = true;
-            this.lblExplain.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblExplain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblExplain.Location = new System.Drawing.Point(405, 158);
             this.lblExplain.Name = "lblExplain";
-            this.lblExplain.Size = new System.Drawing.Size(5000, 73);
+            this.lblExplain.Size = new System.Drawing.Size(922, 93);
             this.lblExplain.TabIndex = 0;
-            this.lblExplain.Text = "It\'s going to appear on the screen three objects.\\r\\ When it finished, Please rep" +
-    "eat them.\\r\\ Remember what they are because you will name them again in a few mi" +
-    "nutes. ";
+            this.lblExplain.Text = "יופיעו על המסך 3 שמות עצם, אחד אחרי השני, כל אחד למשך 10 שניות בלבד.\r\nעליך לשנן ש" +
+    "מות עצם אלו ולזכור אותם כי\r\nבהמשך השאלון תדרש לכתוב את שלושת שמות עצם אלו.";
             // 
             // lblTimeLeft
             // 
-            this.lblTimeLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTimeLeft.AutoSize = true;
-            this.lblTimeLeft.Location = new System.Drawing.Point(463, 47);
+            this.lblTimeLeft.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblTimeLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblTimeLeft.Location = new System.Drawing.Point(0, 431);
             this.lblTimeLeft.Name = "lblTimeLeft";
-            this.lblTimeLeft.Size = new System.Drawing.Size(0, 13);
+            this.lblTimeLeft.Size = new System.Drawing.Size(0, 31);
             this.lblTimeLeft.TabIndex = 7;
             this.lblTimeLeft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -132,7 +130,9 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.titleSplitter);
             this.Name = "NounLabelsForm";
-            this.Text = "NounQuestionForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
+            this.Text = "מבחן הסוללה הנוירו-קוגניטיבית הממוחשבת";
             this.pnlNoun.ResumeLayout(false);
             this.pnlNoun.PerformLayout();
             this.ResumeLayout(false);

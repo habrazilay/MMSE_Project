@@ -27,10 +27,10 @@ namespace MMSE_project.QuestionForms
 
         public MathQuestionForm()
         {
-            InitializeComponent();
+            base.QuestionTitle = "אאנא ענה על השאלה החישובית הבאה:";
+            base.PartNumber = "6";
 
-            base.QuestionTitle = "Please answer the math questions:";
-            base.PartNumber = "Part 6:";
+            InitializeComponent();
 
             lblQuestion.Text = first_number + " - " + SEVEN_NUM + " = ";
             base.btnNext.Enabled = false;

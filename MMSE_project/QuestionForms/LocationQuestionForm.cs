@@ -14,37 +14,17 @@ namespace MMSE_project.QuestionForms
     {
         #region Data Member
 
-        private enum citiesEnum
-        {   
-            TelAviv = 1,
-            Jerusalem,
-            NewYork,
-            BuenosAires,
-            Barcelona,
-            London,
-            Paris,
-            BeerSheva,
-            Bangkok,
-            Marrakech
-        };
+        private const int DEFAULT_MIN_FLOOR = -3;
+        private const int DEFAULT_MAX_FLOOR = 25;
+        private const string CURR_FLOOR = "7";
+        private const string CURR_COUNTRY = "ישראל";
+        private const string CURR_CITY = "ירושלים";
 
-        private enum countriesEnum
-        {
-            Israel = 1,
-            Spain,
-            USA,
-            England,
-            France,
-            Argentina,
-            Thailand,
-            Morocco
-        };
+        List<string> citiesList = new List<string>(new string[] { "תל אביב", CURR_CITY, "ניו יורק", "בואנוס איירס", "פריז",
+                                                                  "ברצלונה", "באר שבע", "מרקש", "בנגקוק", "לונדון" });
 
-        private const int    DEFAULT_MIN_FLOOR = -3;
-        private const int    DEFAULT_MAX_FLOOR = 25;
-        private const string CURR_FLOOR        = "7";
-        private const string CURR_COUNTRY      = "Israel";
-        private const string CURR_CITY         = "Jerusalem";
+        List<string> countiesList = new List<string>(new string[] { CURR_COUNTRY, "צרפת", "ארצות הברית", "אנגליה", "פרו",
+                                                                    "ספרד", "תאילנד", "מרוקן", "ארגנטינה", "פורטוגל"});
 
         #endregion
 
@@ -53,10 +33,10 @@ namespace MMSE_project.QuestionForms
 
         public LocationQuestionForm()
         {
-            InitializeComponent();
+            base.QuestionTitle = "אנא ענה על שאלון התמצאות במקום.";
+            base.PartNumber = "2";
 
-            base.QuestionTitle    = "Please answer the location questions:";
-            base.PartNumber = "Part 2:";
+            InitializeComponent();
 
             FillComboBoxData();
         }
@@ -67,15 +47,15 @@ namespace MMSE_project.QuestionForms
         private void FillComboBoxData()
         {
             // Adding all cities to cityBox
-            for (int city = 1; city <= ((Array)Enum.GetValues(typeof(citiesEnum))).Length; city++)
+            for (int city = 0; city < citiesList.Count; city++)
             {
-                cityBox.Items.Add(Enum.GetName(typeof(citiesEnum), (object)city));
+                cityBox.Items.Add(citiesList[city]);
             }
 
             // Adding all countries to countryBox
-            for (int country = 1; country <= ((Array)Enum.GetValues(typeof(countriesEnum))).Length; country++)
+            for (int country = 0; country < countiesList.Count; country++)
             {
-                countyBox.Items.Add(Enum.GetName(typeof(countriesEnum), (object)country));
+                countyBox.Items.Add(countiesList[country]);
             }
 
             // Adding all floors to floorBox

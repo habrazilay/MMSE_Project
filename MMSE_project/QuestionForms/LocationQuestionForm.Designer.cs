@@ -103,7 +103,7 @@
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(189, 20);
             this.lblCity.TabIndex = 16;
-            this.lblCity.Text = "What city/town are toy in?";
+            this.lblCity.Text = "באיזו עיר אתה נמצא כרגע?";
             // 
             // lblCountry
             // 
@@ -113,7 +113,7 @@
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(184, 20);
             this.lblCountry.TabIndex = 15;
-            this.lblCountry.Text = "What country are you in?";
+            this.lblCountry.Text = "באיזו מדינה אתה נמצא כרגע?";
             // 
             // lblFloor
             // 
@@ -123,7 +123,7 @@
             this.lblFloor.Name = "lblFloor";
             this.lblFloor.Size = new System.Drawing.Size(169, 40);
             this.lblFloor.TabIndex = 13;
-            this.lblFloor.Text = "What floor are you on?";
+            this.lblFloor.Text = "באיזו קומה בבינין אתה נמצא כרגע?";
             // 
             // LocationQuestionForm
             // 
@@ -132,7 +132,7 @@
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.tlpQuestion);
             this.Name = "LocationQuestionForm";
-            this.Text = "LocationQuestionForm";
+            this.Text = base.Text;
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);
             this.Controls.SetChildIndex(this.buttonSplitter, 0);

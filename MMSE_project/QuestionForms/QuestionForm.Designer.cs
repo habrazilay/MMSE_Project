@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnNext = new System.Windows.Forms.Button();
             this.titleSplitter = new System.Windows.Forms.Splitter();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -43,7 +42,7 @@
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(86, 27);
             this.btnNext.TabIndex = 0;
-            this.btnNext.Text = "Next";
+            this.btnNext.Text = "לשאלה הבאה";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
@@ -62,11 +61,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(469, 40);
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblTitle.Location = new System.Drawing.Point(37, 41);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(72, 13);
+            this.lblTitle.Size = new System.Drawing.Size(119, 24);
             this.lblTitle.TabIndex = 4;
-            this.lblTitle.Text = "Question Title";
+            this.lblTitle.Text = "כותרת השאלה";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSplitter
@@ -84,11 +84,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPartNum.AutoSize = true;
-            this.lblPartNum.Location = new System.Drawing.Point(469, 20);
+            this.lblPartNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblPartNum.Location = new System.Drawing.Point(37, 14);
             this.lblPartNum.Name = "lblPartNum";
-            this.lblPartNum.Size = new System.Drawing.Size(26, 13);
+            this.lblPartNum.Size = new System.Drawing.Size(0, 24);
             this.lblPartNum.TabIndex = 6;
-            this.lblPartNum.Text = "Part";
             this.lblPartNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // QuestionForm
@@ -103,8 +103,10 @@
             this.Controls.Add(this.titleSplitter);
             this.MaximumSize = new System.Drawing.Size(1000, 500);
             this.Name = "QuestionForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QuestionForm";
+            this.Text = "מבחן הסוללה הנוירו-קוגניטיבית הממוחשבת";
             this.ResumeLayout(false);
             this.PerformLayout();
 

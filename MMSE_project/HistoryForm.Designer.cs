@@ -44,7 +44,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(64, 13);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "User History";
+            this.lblTitle.Text = "היסטורית משתמש";
             // 
             // tlpHistory
             // 
@@ -83,7 +83,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 2;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "חזרה";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -94,7 +94,7 @@
             this.ClientSize = new System.Drawing.Size(742, 413);
             this.Controls.Add(this.tlpHistory);
             this.Name = "HistoryForm";
-            this.Text = "HistoryForm";
+            this.Text = "היסטורית תוצאות עבור משתמש";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tlpHistory.ResumeLayout(false);
             this.tlpHistory.PerformLayout();
