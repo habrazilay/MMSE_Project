@@ -14,14 +14,15 @@ namespace MMSE_project
     {
         #region Data members
 
-        StreamReader textStreamReader;
+        private StreamReader textStreamReader;
+        private StreamWriter textStreamWriter;
 
         #endregion
 
 
         #region Methods
 
-        private string GetFile(string fileName)
+        private void GetFileReaderAndWriter(string fileName)
         {
             Assembly assembly;
             
@@ -29,22 +30,40 @@ namespace MMSE_project
             {
                 assembly = Assembly.GetExecutingAssembly();
                 textStreamReader = new StreamReader(assembly.GetManifestResourceStream("MMSE_project.Resources.ResultsFile"));
+                textStreamWriter = new StreamWriter(assembly.GetManifestResourceStream("MMSE_project.Resources.ResultsFile"));
             }
             catch
             {
                 MessageBox.Show("Error accessing resources!");
             }
-            return "";
         }
 
-        private void WriteLineToFile()
+        private void WriteLineToFile(string line)
         {
-
+            if (textStreamWriter != null)
+            {
+                textStreamWriter.WriteLine(line);
+            }
         }
 
-        private void ReadLineFromFile()
+        private string ReadLineFromFile()
         {
+            string result = string.Empty;
 
+            if (textStreamReader != null)
+                result = textStreamReader.ReadLine();
+
+            return result;
+        }
+
+        private string ReadAllLines()
+        {
+            string result = string.Empty;
+
+            if (textStreamReader != null)
+                result = textStreamReader.ReadToEnd();
+
+            return result;
         }
 
         #endregion

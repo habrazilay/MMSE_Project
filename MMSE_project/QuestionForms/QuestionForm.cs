@@ -69,9 +69,18 @@ namespace MMSE_project
             this.btnNext.Text = FINISH_TEXT;
         }
 
+        /// <summary>
+        /// Save and show user results
+        /// </summary>
         public void FinishQuiz()
         {
+            // Save user's quis details to file
             QuizPerUser.FinishQuiz();
+
+            // Show the result screen
+            ResultsForm resultForm = new ResultsForm();
+            this.Hide();
+            resultForm.Show();
         }
 
         /// <summary>
