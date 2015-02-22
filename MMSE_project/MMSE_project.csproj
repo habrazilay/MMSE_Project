@@ -86,6 +86,7 @@
     <Compile Include="ResultsForm.Designer.cs">
       <DependentUpon>ResultsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpellingCheck.cs" />
     <Compile Include="UserControls\MandatoryComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>

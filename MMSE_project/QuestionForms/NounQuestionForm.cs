@@ -53,14 +53,16 @@ namespace MMSE_project.QuestionForms
         {
             double score = 0;
 
-            if (NounManagment.GetNounsList().Contains(txtFirstNoun.FieldText))
-                score++;
-
-            if (NounManagment.GetNounsList().Contains(txtSecondNoun.FieldText))
-                score++;
-
-            if (NounManagment.GetNounsList().Contains(txtThrdNoun.FieldText))
-                score++;
+            // Getting the shown nouns and check if the user insert them correctly.
+            foreach (string noun in NounManagment.GetNounsList())
+            {
+                if (SpellingCheck.EqualsIgnoringMisspellings(noun, txtFirstNoun.FieldText) ||
+                    SpellingCheck.EqualsIgnoringMisspellings(noun, txtSecondNoun.FieldText) ||
+                    SpellingCheck.EqualsIgnoringMisspellings(noun, txtThrdNoun.FieldText))
+                {
+                    score++;
+                }
+            }
 
             return score;
         }

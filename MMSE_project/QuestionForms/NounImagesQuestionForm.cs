@@ -140,14 +140,16 @@ namespace MMSE_project.QuestionForms
         {
             double score = 0;
 
-            if (randomImagesNames.Contains(txtFirstNoun.FieldText))
-                score++;
-
-            if (randomImagesNames.Contains(txtSecondNoun.FieldText))
-                score++;
-
-            if (randomImagesNames.Contains(txtThrdNoun.FieldText))
-                score++;
+            // Check if the user insert images objects correctly.
+            foreach (string nounImage in randomImagesNames)
+            {
+                if (SpellingCheck.EqualsIgnoringMisspellings(nounImage, txtFirstNoun.FieldText) ||
+                    SpellingCheck.EqualsIgnoringMisspellings(nounImage, txtSecondNoun.FieldText) ||
+                    SpellingCheck.EqualsIgnoringMisspellings(nounImage, txtThrdNoun.FieldText))
+                {
+                    score++;
+                }
+            }
 
             return score;
         }
