@@ -33,7 +33,7 @@ namespace MMSE_project.QuestionForms
 
       //   List<string> nounsList = GlobalClass.GetNounsList();
         private int wordNumber    = 0;
-        private int secoundNumber = MAX_SECOUNDS;
+        private int secondNumber = MAX_SECOUNDS;
 
         #endregion
      
@@ -95,7 +95,7 @@ namespace MMSE_project.QuestionForms
         /// </summary>
         private void SetSecondLabel()
         {
-            lblTimeLeft.Text = secoundNumber.ToString();
+            lblTimeLeft.Text = secondNumber.ToString();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -110,10 +110,10 @@ namespace MMSE_project.QuestionForms
         /// </summary>
         private void wordsTimer_Tick(object sender, EventArgs e)
         {
-            if (secoundNumber == 0)
+            if (secondNumber == 0)
             {
                 wordNumber++;
-                secoundNumber = MAX_SECOUNDS;
+                secondNumber = MAX_SECOUNDS;
 
                 if (wordNumber != 3)
                 {
@@ -129,7 +129,7 @@ namespace MMSE_project.QuestionForms
             }
             else
             { 
-                secoundNumber--;                
+                secondNumber--;                
             }
 
             SetSecondLabel();
