@@ -30,16 +30,16 @@ namespace MMSE_project.QuestionForms
         private void InitializeComponent()
         {
             this.tlpNounsPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.txtThrdNoun = new MMSE_project.UserControls.MandatoryTextBox();
+            this.txtSecondNoun = new MMSE_project.UserControls.MandatoryTextBox();
             this.pbSecondNounImage = new System.Windows.Forms.PictureBox();
+            this.pbThirdNounImage = new System.Windows.Forms.PictureBox();
             this.pbFirstNounImage = new System.Windows.Forms.PictureBox();
             this.txtFirstNoun = new MMSE_project.UserControls.MandatoryTextBox();
-            this.txtSecondNoun = new MMSE_project.UserControls.MandatoryTextBox();
-            this.pbThirdNounImage = new System.Windows.Forms.PictureBox();
-            this.txtThrdNoun = new MMSE_project.UserControls.MandatoryTextBox();
             this.tlpNounsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSecondNounImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThirdNounImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNext
@@ -69,6 +69,26 @@ namespace MMSE_project.QuestionForms
             this.tlpNounsPanel.Size = new System.Drawing.Size(984, 301);
             this.tlpNounsPanel.TabIndex = 7;
             // 
+            // txtThrdNoun
+            // 
+            this.txtThrdNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtThrdNoun.FieldText = "";
+            this.txtThrdNoun.Location = new System.Drawing.Point(266, 239);
+            this.txtThrdNoun.Name = "txtThrdNoun";
+            this.txtThrdNoun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtThrdNoun.Size = new System.Drawing.Size(223, 23);
+            this.txtThrdNoun.TabIndex = 5;
+            // 
+            // txtSecondNoun
+            // 
+            this.txtSecondNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtSecondNoun.FieldText = "";
+            this.txtSecondNoun.Location = new System.Drawing.Point(266, 139);
+            this.txtSecondNoun.Name = "txtSecondNoun";
+            this.txtSecondNoun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSecondNoun.Size = new System.Drawing.Size(223, 22);
+            this.txtSecondNoun.TabIndex = 4;
+            // 
             // pbSecondNounImage
             // 
             this.pbSecondNounImage.Dock = System.Windows.Forms.DockStyle.Right;
@@ -78,6 +98,16 @@ namespace MMSE_project.QuestionForms
             this.pbSecondNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbSecondNounImage.TabIndex = 7;
             this.pbSecondNounImage.TabStop = false;
+            // 
+            // pbThirdNounImage
+            // 
+            this.pbThirdNounImage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pbThirdNounImage.Location = new System.Drawing.Point(495, 203);
+            this.pbThirdNounImage.Name = "pbThirdNounImage";
+            this.pbThirdNounImage.Size = new System.Drawing.Size(125, 95);
+            this.pbThirdNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbThirdNounImage.TabIndex = 8;
+            this.pbThirdNounImage.TabStop = false;
             // 
             // pbFirstNounImage
             // 
@@ -99,36 +129,6 @@ namespace MMSE_project.QuestionForms
             this.txtFirstNoun.Size = new System.Drawing.Size(223, 21);
             this.txtFirstNoun.TabIndex = 3;
             // 
-            // txtSecondNoun
-            // 
-            this.txtSecondNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSecondNoun.FieldText = "";
-            this.txtSecondNoun.Location = new System.Drawing.Point(266, 139);
-            this.txtSecondNoun.Name = "txtSecondNoun";
-            this.txtSecondNoun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSecondNoun.Size = new System.Drawing.Size(223, 22);
-            this.txtSecondNoun.TabIndex = 4;
-            // 
-            // pbThirdNounImage
-            // 
-            this.pbThirdNounImage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pbThirdNounImage.Location = new System.Drawing.Point(495, 203);
-            this.pbThirdNounImage.Name = "pbThirdNounImage";
-            this.pbThirdNounImage.Size = new System.Drawing.Size(125, 95);
-            this.pbThirdNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbThirdNounImage.TabIndex = 8;
-            this.pbThirdNounImage.TabStop = false;
-            // 
-            // txtThrdNoun
-            // 
-            this.txtThrdNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtThrdNoun.FieldText = "";
-            this.txtThrdNoun.Location = new System.Drawing.Point(266, 239);
-            this.txtThrdNoun.Name = "txtThrdNoun";
-            this.txtThrdNoun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtThrdNoun.Size = new System.Drawing.Size(223, 23);
-            this.txtThrdNoun.TabIndex = 5;
-            // 
             // NounImagesQuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,8 +145,8 @@ namespace MMSE_project.QuestionForms
             this.Controls.SetChildIndex(this.tlpNounsPanel, 0);
             this.tlpNounsPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbSecondNounImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbThirdNounImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

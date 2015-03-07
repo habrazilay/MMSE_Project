@@ -43,6 +43,7 @@ namespace MMSE_project.QuestionForms
 
         private void InitAllClockImages()
         {
+
             allClockImages.Add(Properties.Resources._0155);
             allClockImages[0].Tag = "0155";
 
@@ -92,7 +93,7 @@ namespace MMSE_project.QuestionForms
             allClockImages[15].Tag = "1230";
         }
 
-        /// Getting random analog clocks images
+        // Getting random analog clocks images
 
         private void RandomClockImages()
         {
@@ -115,7 +116,9 @@ namespace MMSE_project.QuestionForms
         {
             bool returnValue = true;
 
-
+            txtClockTime.MandatoryMessageVisibility(txtClockTime.FieldText == string.Empty);
+            if (txtClockTime.FieldText == string.Empty)
+                returnValue = false;
 
             return returnValue;
 
@@ -135,6 +138,14 @@ namespace MMSE_project.QuestionForms
         public override double CheckAnswers()
         {
             double score = 0;
+
+            foreach (string clockImage in randomImagesNames)
+            {
+                if (SpellingCheck.EqualsIgnoringMisspellings(clockImage, txtClockTime.FieldText))
+                {
+                    score++;
+                }
+            }
             
             return score;
         }
