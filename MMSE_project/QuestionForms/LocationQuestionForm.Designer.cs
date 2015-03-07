@@ -42,6 +42,10 @@
             // 
             this.btnNext.Location = new System.Drawing.Point(431, 404);
             // 
+            // buttonSplitter
+            // 
+            this.buttonSplitter.Location = new System.Drawing.Point(0, 381);
+            // 
             // tlpQuestion
             // 
             this.tlpQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -97,9 +101,9 @@
             this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblCity.Location = new System.Drawing.Point(249, 0);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(161, 20);
+            this.lblCity.Size = new System.Drawing.Size(189, 20);
             this.lblCity.TabIndex = 16;
-            this.lblCity.Text = "Which city you are in?";
+            this.lblCity.Text = "באיזו עיר אתה נמצא כרגע?";
             // 
             // lblCountry
             // 
@@ -107,9 +111,9 @@
             this.lblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblCountry.Location = new System.Drawing.Point(249, 100);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(190, 20);
+            this.lblCountry.Size = new System.Drawing.Size(184, 20);
             this.lblCountry.TabIndex = 15;
-            this.lblCountry.Text = "Which country you are in?";
+            this.lblCountry.Text = "באיזו מדינה אתה נמצא כרגע?";
             // 
             // lblFloor
             // 
@@ -117,9 +121,9 @@
             this.lblFloor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblFloor.Location = new System.Drawing.Point(249, 200);
             this.lblFloor.Name = "lblFloor";
-            this.lblFloor.Size = new System.Drawing.Size(169, 20);
+            this.lblFloor.Size = new System.Drawing.Size(169, 40);
             this.lblFloor.TabIndex = 13;
-            this.lblFloor.Text = "Which floor you are in?";
+            this.lblFloor.Text = "באיזו קומה בבינין אתה נמצא כרגע?";
             // 
             // LocationQuestionForm
             // 
@@ -128,7 +132,7 @@
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.tlpQuestion);
             this.Name = "LocationQuestionForm";
-            this.Text = "LocationQuestionForm";
+            this.Text = base.Text;
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);
             this.Controls.SetChildIndex(this.buttonSplitter, 0);

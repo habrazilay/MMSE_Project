@@ -8,11 +8,18 @@ namespace MMSE_project
 {
     class QuizPerUser
     {
-        public  static string   userID;
+        #region Data members
+
+        public  static string   currUserID;
         private static List<QuestionResult> questionsResultsList;
         private static double   totalQuizScore;
         private static TimeSpan totalQuizTime;
         public  static DateTime quizStartTime;
+
+        #endregion
+
+
+        #region Getting/Setting properties
 
         public static double TotalQuizScore
         {
@@ -59,5 +66,33 @@ namespace MMSE_project
                 totalQuizTime = value;
             }
         }
+
+        #endregion
+
+
+        #region Methods
+
+        /// <summary>
+        /// The methods called when user starting a new quiz, and init all the quiz parameter.
+        /// </summary>
+        public static void StartQuiz(string userID)
+        {
+             currUserID = userID;
+             questionsResultsList = new List<QuestionResult>();
+             totalQuizScore = 0;
+             totalQuizTime = TimeSpan.Zero;
+             quizStartTime = DateTime.Now;
+        }
+
+        /// <summary>
+        /// The methods called when user finish his quiz.
+        /// It saving the quiz results at file.
+        /// </summary>
+        public static void FinishQuiz()
+        {
+            
+        }
+
+        #endregion
     }
 }

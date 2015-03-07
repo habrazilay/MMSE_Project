@@ -14,36 +14,17 @@ namespace MMSE_project.QuestionForms
     {
         #region Data Members
 
-        private enum monthsEnum
-        {   
-            January = 1,
-            February,
-            March,
-            April,
-            May,
-            June,
-            July,
-            August,
-            September,
-            October,
-            November,
-            December
-        };
+        private List<string> monthList = new List<string>(new string[] {"ינואר", "פברואר", "מרץ",
+                                                                        "אפריל", "מאי", "יוני",
+                                                                        "יולי", "אוגוסט", "ספטמבר",
+                                                                        "אוקטובר", "נובמבר", "דצמבר"});
 
-        private enum seasonsEnum
-        {
-            Autumn = 1,
-            Winter,
-            Spring,
-            Summer
-
-        };
+        private List<string> seasonList = new List<string>(new string[] { "סתיו", "חורף", "אביב", "קיץ" });
 
         private const int DEFAULT_MIN_YEAR = 1990;
         private const int DEFAULT_MAX_YEAR = 2050;
         private const int FIRST_DAY        = 1;
         private const int LAST_DAY         = 31;
-        private const int FIRST_MONTH      = 1;
         private const int LAST_MONTH       = 12;
         private const int SEASONS_NUM      = 4;
 
@@ -54,11 +35,10 @@ namespace MMSE_project.QuestionForms
 
         public TimeQuestionForm()
         {
-            InitializeComponent();
+            base.QuestionTitle = "אנא ענה על שאלון התמצאות בזמן.";
+            base.PartNumber = "1";
 
-            base.QuestionTitle = "Part 1: Please answer the time questions:";
-            base.PartNumber = "Part 1:";
-            //   base.timerForQuestion.Start();
+            InitializeComponent();
 
             FillComboBoxData();
             
@@ -76,9 +56,9 @@ namespace MMSE_project.QuestionForms
             }
 
             // Adding all months in a year to monthBox
-            for (int month = FIRST_MONTH; month <= LAST_MONTH; month++)
+            for (int month = 0; month < LAST_MONTH; month++)
 	        {
-                monthBox.Items.Add(Enum.GetName(typeof(monthsEnum), (object)month));
+                monthBox.Items.Add(monthList[month]);
             }
 
             // Adding all days in a month to dayBox
@@ -88,9 +68,9 @@ namespace MMSE_project.QuestionForms
             }
 
             // Adding all seasons in a year to seasonBox
-            for (int season = 1; season <= SEASONS_NUM; season++)
+            for (int season = 0; season < SEASONS_NUM; season++)
             {
-                seasonBox.Items.Add(Enum.GetName(typeof(seasonsEnum), (object)season));
+                seasonBox.Items.Add(seasonList[season]);
             }
         }
 
@@ -146,24 +126,19 @@ namespace MMSE_project.QuestionForms
                     || (thisDay.Day - 1 == Convert.ToInt32(dayBox.SelectedItem))))
             {
                 score = score + 0.5;
-            }
-            else
-            {
-                score = score + 0;
-            }                
+            }               
 
             // Check if month is correct
-            string currMonth = (Enum.GetName(typeof(monthsEnum), thisDay.Month));
+            int currMonthIndex = thisDay.Month + 1;
+            string currMonth = monthList[currMonthIndex];
 
             if (currMonth == monthBox.SelectedItem.ToString())
                 score++;
-            else if (((Enum.GetName(typeof(monthsEnum), (thisDay.Month - 1)) == monthBox.SelectedItem.ToString()) ||
-                      (Enum.GetName(typeof(monthsEnum), (thisDay.Month + 1))) == monthBox.SelectedItem.ToString()))
+            else if (((monthList[currMonthIndex - 1] == monthBox.SelectedItem.ToString()) ||
+                       monthList[currMonthIndex + 1] == monthBox.SelectedItem.ToString()))
             {
                 score = score + 0.5;
             }
-            else
-                score = score + 0;
 
             // Check if year s correct
             if (thisDay.Year.ToString() == yearBox.SelectedItem.ToString())
@@ -173,35 +148,36 @@ namespace MMSE_project.QuestionForms
             {
                 score = score + 0.5;
             }
-                           
-            else
-                score = score + 0;
 
             // Check if seasion is correct
             // The seasons distributed by - http://www.ynet.co.il/yaan/0,7340,L-18073-PreYaan,00.html
-            if (currMonth == "September" ||
-                currMonth == "October"   ||
-                currMonth == "November")
+            if (thisDay.Month == 9 ||
+                thisDay.Month == 10 ||
+                thisDay.Month == 11)
             {
-                currSeason = seasonsEnum.Autumn.ToString();
+                // The current season is "Autumn"
+                currSeason = seasonList[0];
             }
-            else if (currMonth == "December"  ||
-                     currMonth == "January"   ||
-                     currMonth == "February")
+            else if (thisDay.Month == 12 ||
+                     thisDay.Month == 1 ||
+                     thisDay.Month == 2)
             {
-                currSeason = seasonsEnum.Winter.ToString();
+                // The current season is "Winter"
+                currSeason = seasonList[1];
             }
-            else if (currMonth == "March"  ||
-                     currMonth == "April"  ||
-                     currMonth == "May")
+            else if (thisDay.Month == 3 ||
+                     thisDay.Month == 4 ||
+                     thisDay.Month == 5)
             {
-                currSeason = seasonsEnum.Spring.ToString();
+                // The current season is "Spring"
+                currSeason = seasonList[2];
             }
-            else if (currMonth == "June"  ||
-                     currMonth == "July"  ||
-                     currMonth == "August")
+            else if (thisDay.Month == 6 ||
+                     thisDay.Month == 7 ||
+                     thisDay.Month == 8)
             {
-                currSeason = seasonsEnum.Summer.ToString();
+                // The current season is "Summer"
+                currSeason = seasonList[3];
             }
 
             if (currSeason == seasonBox.SelectedItem.ToString())

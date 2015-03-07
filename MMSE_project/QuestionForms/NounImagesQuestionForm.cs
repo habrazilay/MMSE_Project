@@ -14,16 +14,93 @@ namespace MMSE_project.QuestionForms
     public partial class NounImagesQuestionForm : QuestionForm
     {
         #region Data Member
+
+        private const int NUM_OF_NOUNS_IMAGES = 3;
+
+        List<Image> allNounImages              = new List<Image>();
+        private List<Image> randomImages       = new List<Image>();
+        private List<string> randomImagesNames = new List<string>();
+
         #endregion
+
+
         #region Methods
 
         public NounImagesQuestionForm()
         {
-            InitializeComponent();
+            InitAllNounImages();
+            randomNounsImages();
 
-            base.PartNumber = "Part 4:";
-            base.QuestionTitle = "There are 3 Images of nouns. Please fill the noun name in the fields below.";
- 
+            base.PartNumber = "4";
+            base.QuestionTitle = @"על המסך מופיעות שלוש תמונות של שמות עצם./r/nאנא מלא את שמות העצם בשדה הטקסט שלייד התמונה.";
+        
+            InitializeComponent();
+    
+            // Setting images in pictureBoxes
+            pbFirstNounImage.Image = randomImages[0];
+            pbSecondNounImage.Image = randomImages[1];
+            pbThirdNounImage.Image = randomImages[2];
+        }
+
+        /// <summary>
+        /// Initialize the 10 pictures 
+        /// </summary>
+        private void InitAllNounImages()
+        {
+            allNounImages.Add(Properties.Resources.Ball);
+            allNounImages[0].Tag = "כדור";
+
+            allNounImages.Add(Properties.Resources.Banana);
+            allNounImages[1].Tag = "בננה";
+
+            allNounImages.Add(Properties.Resources.Book);
+            allNounImages[2].Tag = "ספר";
+
+            allNounImages.Add(Properties.Resources.Car);
+            allNounImages[3].Tag = "מכונית";
+
+            allNounImages.Add(Properties.Resources.Cat);
+            allNounImages[4].Tag = "חתול";
+
+            allNounImages.Add(Properties.Resources.Hammer);
+            allNounImages[5].Tag = "פטיש";
+
+            allNounImages.Add(Properties.Resources.Hat);
+            allNounImages[6].Tag = "כובע";
+
+            allNounImages.Add(Properties.Resources.Horse);
+            allNounImages[7].Tag = "סוס";
+
+            allNounImages.Add(Properties.Resources.House);
+            allNounImages[8].Tag = "בית";
+
+            allNounImages.Add(Properties.Resources.Sun);
+            allNounImages[9].Tag = "שמש";
+        }
+
+        /// <summary>
+        /// Getting random nouns images
+        /// </summary>
+        private void randomNounsImages()
+        {
+            Random random = new Random();
+
+            int index = -1;
+            bool isAllDifferentNouns = false;
+
+            while (!isAllDifferentNouns)
+            {
+                index = random.Next(allNounImages.Count);
+
+                if (!randomImages.Contains(allNounImages[index]))
+                {
+                    randomImages.Add(allNounImages[index]);
+                    randomImagesNames.Add(allNounImages[index].Tag.ToString());
+                }
+
+                if (randomImages.Count == NUM_OF_NOUNS_IMAGES)
+                    isAllDifferentNouns = true;
+            }
         }
 
         #endregion
@@ -63,7 +140,16 @@ namespace MMSE_project.QuestionForms
         {
             double score = 0;
 
-
+            // Check if the user insert images objects correctly.
+            foreach (string nounImage in randomImagesNames)
+            {
+                if (SpellingCheck.EqualsIgnoringMisspellings(nounImage, txtFirstNoun.FieldText) ||
+                    SpellingCheck.EqualsIgnoringMisspellings(nounImage, txtSecondNoun.FieldText) ||
+                    SpellingCheck.EqualsIgnoringMisspellings(nounImage, txtThrdNoun.FieldText))
+                {
+                    score++;
+                }
+            }
 
             return score;
         }

@@ -91,7 +91,7 @@ namespace MMSE_project.QuestionForms
             this.lblFirstNoun.Name = "lblFirstNoun";
             this.lblFirstNoun.Size = new System.Drawing.Size(56, 13);
             this.lblFirstNoun.TabIndex = 0;
-            this.lblFirstNoun.Text = "First noun:";
+            this.lblFirstNoun.Text = "שם העצם הראשון:";
             // 
             // lblSecondNoun
             // 
@@ -100,7 +100,7 @@ namespace MMSE_project.QuestionForms
             this.lblSecondNoun.Name = "lblSecondNoun";
             this.lblSecondNoun.Size = new System.Drawing.Size(74, 13);
             this.lblSecondNoun.TabIndex = 1;
-            this.lblSecondNoun.Text = "Second noun:";
+            this.lblSecondNoun.Text = "שם העצם השני:";
             // 
             // lblThirdNoun
             // 
@@ -109,7 +109,7 @@ namespace MMSE_project.QuestionForms
             this.lblThirdNoun.Name = "lblThirdNoun";
             this.lblThirdNoun.Size = new System.Drawing.Size(61, 13);
             this.lblThirdNoun.TabIndex = 2;
-            this.lblThirdNoun.Text = "Third noun:";
+            this.lblThirdNoun.Text = "שם העצם השלישי:";
             // 
             // txtFirstNoun
             // 
@@ -127,7 +127,7 @@ namespace MMSE_project.QuestionForms
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.tlpNounsPanel);
             this.Name = "NounQuestionForm";
-            this.Text = "NounQuestionForm";
+            this.Text = base.Text;
             this.Controls.SetChildIndex(this.lblPartNum, 0);
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);

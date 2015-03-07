@@ -18,26 +18,5 @@ namespace MMSE_project
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }
-
-        #region Noun List
-
-        private static List<string> nounList = new List<string>();
-
-        public static List<string> GetNounsList()
-        {
-            return nounList;
-        }
-
-        public static void SetNounsList(List<string> list)
-        {
-            nounList = list;
-        }
-
-        public static void AddNounToList(string noun)
-        {
-            nounList.Add(noun);
-        }
-
-        #endregion
     }
 }

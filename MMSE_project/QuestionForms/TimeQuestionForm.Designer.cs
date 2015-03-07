@@ -45,6 +45,10 @@
             this.btnNext.Location = new System.Drawing.Point(472, 405);
             this.btnNext.Size = new System.Drawing.Size(95, 27);
             // 
+            // buttonSplitter
+            // 
+            this.buttonSplitter.Location = new System.Drawing.Point(0, 381);
+            // 
             // tlpQuestion
             // 
             this.tlpQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -75,7 +79,7 @@
             // seasonBox
             // 
             this.seasonBox.DropDownHeight = 106;
-            this.seasonBox.Location = new System.Drawing.Point(495, 228);
+            this.seasonBox.Location = new System.Drawing.Point(253, 228);
             this.seasonBox.Name = "seasonBox";
             this.seasonBox.Size = new System.Drawing.Size(236, 68);
             this.seasonBox.TabIndex = 21;
@@ -83,7 +87,7 @@
             // dayBox
             // 
             this.dayBox.DropDownHeight = 150;
-            this.dayBox.Location = new System.Drawing.Point(495, 3);
+            this.dayBox.Location = new System.Drawing.Point(253, 3);
             this.dayBox.Name = "dayBox";
             this.dayBox.Size = new System.Drawing.Size(236, 56);
             this.dayBox.TabIndex = 20;
@@ -91,7 +95,7 @@
             // monthBox
             // 
             this.monthBox.DropDownHeight = 106;
-            this.monthBox.Location = new System.Drawing.Point(495, 78);
+            this.monthBox.Location = new System.Drawing.Point(253, 78);
             this.monthBox.Name = "monthBox";
             this.monthBox.Size = new System.Drawing.Size(236, 52);
             this.monthBox.TabIndex = 19;
@@ -99,7 +103,7 @@
             // yearBox
             // 
             this.yearBox.DropDownHeight = 150;
-            this.yearBox.Location = new System.Drawing.Point(495, 153);
+            this.yearBox.Location = new System.Drawing.Point(253, 153);
             this.yearBox.Name = "yearBox";
             this.yearBox.Size = new System.Drawing.Size(236, 52);
             this.yearBox.TabIndex = 18;
@@ -108,41 +112,41 @@
             // 
             this.seasonLabel.AutoSize = true;
             this.seasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.seasonLabel.Location = new System.Drawing.Point(249, 225);
+            this.seasonLabel.Location = new System.Drawing.Point(596, 225);
             this.seasonLabel.Name = "seasonLabel";
             this.seasonLabel.Size = new System.Drawing.Size(139, 20);
             this.seasonLabel.TabIndex = 17;
-            this.seasonLabel.Text = "What season is it?";
+            this.seasonLabel.Text = "מהי עונת השנה הנוכחית?";
             // 
             // dayLabel
             // 
             this.dayLabel.AutoSize = true;
             this.dayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.dayLabel.Location = new System.Drawing.Point(249, 0);
+            this.dayLabel.Location = new System.Drawing.Point(623, 0);
             this.dayLabel.Name = "dayLabel";
             this.dayLabel.Size = new System.Drawing.Size(112, 20);
             this.dayLabel.TabIndex = 16;
-            this.dayLabel.Text = "What day is it?";
+            this.dayLabel.Text = "מה הוא היום הנוכחי בחודש?";
             // 
             // monthLabel
             // 
             this.monthLabel.AutoSize = true;
             this.monthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.monthLabel.Location = new System.Drawing.Point(249, 75);
+            this.monthLabel.Location = new System.Drawing.Point(603, 75);
             this.monthLabel.Name = "monthLabel";
             this.monthLabel.Size = new System.Drawing.Size(132, 20);
             this.monthLabel.TabIndex = 15;
-            this.monthLabel.Text = "What month is it?";
+            this.monthLabel.Text = "מהו החודש הנוכחי?";
             // 
             // yearLabel
             // 
             this.yearLabel.AutoSize = true;
             this.yearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.yearLabel.Location = new System.Drawing.Point(249, 150);
+            this.yearLabel.Location = new System.Drawing.Point(618, 150);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(117, 20);
             this.yearLabel.TabIndex = 13;
-            this.yearLabel.Text = "What year is it?";
+            this.yearLabel.Text = "מהי השנה הנוכחית?";
             // 
             // TimeQuestionForm
             // 
@@ -151,7 +155,9 @@
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.tlpQuestion);
             this.Name = "TimeQuestionForm";
-            this.Text = "TimeQuestionForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
+            this.Text = base.Text;
             this.Controls.SetChildIndex(this.lblPartNum, 0);
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);

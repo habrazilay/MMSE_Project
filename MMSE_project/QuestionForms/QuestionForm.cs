@@ -16,6 +16,9 @@ namespace MMSE_project
     {
         #region Data Members
 
+        private const string FINISH_TEXT = "סיים!";
+        private const string NEXT_TEXT   = "הבא";
+
         private QuestionResult qrQuestionResult;
         private Stopwatch      stopwatch;
 
@@ -37,7 +40,10 @@ namespace MMSE_project
 
         public string PartNumber
         {
-            set { this.lblPartNum.Text = value; }
+            set 
+            {
+                this.lblPartNum.Text = "חלק מספר " + value + ":"; 
+            }
         }
 
         public void StartStopwatch()
@@ -56,6 +62,28 @@ namespace MMSE_project
             InitializeComponent();
             qrQuestionResult = new QuestionResult();
             StartStopwatch();
+        }
+
+        /// <summary>
+        /// Change next button to finish button
+        /// </summary>
+        public void ChangeButtonTextToFinish()
+        {
+            this.btnNext.Text = FINISH_TEXT;
+        }
+
+        /// <summary>
+        /// Save and show user results
+        /// </summary>
+        public void FinishQuiz()
+        {
+            // Save user's quis details to file
+            QuizPerUser.FinishQuiz();
+
+            // Show the result screen
+            ResultsForm resultForm = new ResultsForm();
+            this.Hide();
+            resultForm.Show();
         }
 
         /// <summary>
@@ -90,6 +118,8 @@ namespace MMSE_project
             if (CheckValidation())
             {
                 stopwatch.Stop();
+
+                QuestionResult.QuestionNumber = GetQuestionNumber();
                 QuestionResult.Score = CheckAnswers();
                 QuestionResult.TimeToQuestion = stopwatch.Elapsed;
 
