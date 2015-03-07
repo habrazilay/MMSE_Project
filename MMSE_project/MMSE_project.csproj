@@ -152,6 +152,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuestionForms\AnalogClockQuestionForm.resx">
+      <DependentUpon>AnalogClockQuestionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuestionForms\LocationQuestionForm.resx">
       <DependentUpon>LocationQuestionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,9 +198,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\AnalogClocks\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Images\Objects\Car.png" />
   </ItemGroup>
@@ -240,6 +241,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Objects\sun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0235.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0445.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0525.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0605.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0715.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0845.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\0955.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\1010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\1115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\1125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\1200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\1205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\1230.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
