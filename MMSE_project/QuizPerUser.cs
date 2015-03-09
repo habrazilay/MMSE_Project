@@ -95,14 +95,16 @@ namespace MMSE_project
 
             foreach (QuestionResult qr in questionsResultsList)
 	        {
-		        quesetionsData = quesetionsData + qr.QuestionNumber + "|" + qr.Score + "|" + qr.TimeToQuestion;
+		        quesetionsData = quesetionsData + qr.QuestionNumber.ToString() + "|" +
+                                                  qr.Score.ToString() + "|" +
+                                                  qr.TimeToQuestion.ToString();
 	        }
 
-            FilesManagment.WriteLineToFile(quizStartTime.Date + "|" +
-                                           quizStartTime.TimeOfDay + "|" +
-                                           currUserID + "|" +
-                                           totalQuizScore + "|" +
-                                           totalQuizTime + "|" +
+            FilesManagment.WriteLineToFile(quizStartTime.Date.ToString() + "|" +
+                                           quizStartTime.TimeOfDay.ToString() + "|" +
+                                           currUserID.ToString() + "|" +
+                                           totalQuizScore.ToString() + "|" +
+                                           totalQuizTime.ToString() + "|" +
                                            quesetionsData);
 
         }

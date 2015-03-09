@@ -27,7 +27,7 @@ namespace MMSE_project
         {
             // Getting user results file path 
             string userID = QuizPerUser.currUserID;
-            filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"HistoryFiles\" + userID).Replace(@"bin\Debug\", "");
+            filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"HistoryFiles\" + userID + ".txt").Replace(@"bin\Debug\", "");
 
             // Check if file is exist
             if (!File.Exists(filePath))
@@ -47,6 +47,7 @@ namespace MMSE_project
             if (textStreamWriter != null)
             {
                 textStreamWriter.WriteLine(line);
+                textStreamWriter.Close();
             }
         }
 
