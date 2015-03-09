@@ -10,35 +10,39 @@ using System.Windows.Forms;
 
 namespace MMSE_project
 {
-    class FilesManagment
+    public static class FilesManagment
     {
         #region Data members
 
-        private StreamReader textStreamReader;
-        private StreamWriter textStreamWriter;
+        private static StreamReader textStreamReader;
+        private static StreamWriter textStreamWriter;
+        private static string filePath;
 
         #endregion
 
 
         #region Methods
 
-        private void GetFileReaderAndWriter(string fileName)
+        static FilesManagment()
         {
-            Assembly assembly;
-            
-            try
+            // Getting user results file path 
+            string userID = QuizPerUser.currUserID;
+            filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"HistoryFiles\" + userID).Replace(@"bin\Debug\", "");
+
+            // Check if file is exist
+            if (!File.Exists(filePath))
             {
-                assembly = Assembly.GetExecutingAssembly();
-                textStreamReader = new StreamReader(assembly.GetManifestResourceStream("MMSE_project.Resources.ResultsFile"));
-                textStreamWriter = new StreamWriter(assembly.GetManifestResourceStream("MMSE_project.Resources.ResultsFile"));
+                File.Create(filePath);
+                textStreamWriter = new StreamWriter(filePath);
             }
-            catch
+            else
             {
-                MessageBox.Show("Error accessing resources!");
+               textStreamWriter = new StreamWriter(filePath, true);
             }
         }
 
-        private void WriteLineToFile(string line)
+
+        public static void WriteLineToFile(string line)
         {
             if (textStreamWriter != null)
             {
@@ -46,7 +50,7 @@ namespace MMSE_project
             }
         }
 
-        private string ReadLineFromFile()
+        public static string ReadLineFromFile()
         {
             string result = string.Empty;
 
@@ -56,7 +60,7 @@ namespace MMSE_project
             return result;
         }
 
-        private string ReadAllLines()
+        public static string ReadAllLines()
         {
             string result = string.Empty;
 

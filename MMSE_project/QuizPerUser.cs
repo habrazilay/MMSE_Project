@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,7 +91,20 @@ namespace MMSE_project
         /// </summary>
         public static void FinishQuiz()
         {
-            
+            string quesetionsData = string.Empty;
+
+            foreach (QuestionResult qr in questionsResultsList)
+	        {
+		        quesetionsData = quesetionsData + qr.QuestionNumber + "|" + qr.Score + "|" + qr.TimeToQuestion;
+	        }
+
+            FilesManagment.WriteLineToFile(quizStartTime.Date + "|" +
+                                           quizStartTime.TimeOfDay + "|" +
+                                           currUserID + "|" +
+                                           totalQuizScore + "|" +
+                                           totalQuizTime + "|" +
+                                           quesetionsData);
+
         }
 
         #endregion
