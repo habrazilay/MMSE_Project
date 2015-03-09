@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.pbConvertHour = new System.Windows.Forms.PictureBox();
-            this.txtConvertHour = new MMSE_project.UserControls.MandatoryTextBox();
+            this.cmbHours = new MMSE_project.QuestionForms.MandatoryComboBox();
+            this.cmbMinutes = new MMSE_project.QuestionForms.MandatoryComboBox();
+            this.lblSeperator = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbConvertHour)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,22 +49,39 @@
             this.pbConvertHour.TabIndex = 7;
             this.pbConvertHour.TabStop = false;
             // 
-            // txtConvertHour
+            // cmbHours
             // 
-            this.txtConvertHour.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtConvertHour.FieldText = "";
-            this.txtConvertHour.Location = new System.Drawing.Point(250, 331);
-            this.txtConvertHour.Name = "txtConvertHour";
-            this.txtConvertHour.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtConvertHour.Size = new System.Drawing.Size(86, 21);
-            this.txtConvertHour.TabIndex = 9;
+            this.cmbHours.DropDownHeight = 106;
+            this.cmbHours.Location = new System.Drawing.Point(267, 314);
+            this.cmbHours.Name = "cmbHours";
+            this.cmbHours.Size = new System.Drawing.Size(150, 44);
+            this.cmbHours.TabIndex = 8;
+            // 
+            // cmbMinutes
+            // 
+            this.cmbMinutes.DropDownHeight = 106;
+            this.cmbMinutes.Location = new System.Drawing.Point(136, 314);
+            this.cmbMinutes.Name = "cmbMinutes";
+            this.cmbMinutes.Size = new System.Drawing.Size(150, 44);
+            this.cmbMinutes.TabIndex = 9;
+            // 
+            // lblSeperator
+            // 
+            this.lblSeperator.AutoSize = true;
+            this.lblSeperator.Location = new System.Drawing.Point(307, 318);
+            this.lblSeperator.Name = "lblSeperator";
+            this.lblSeperator.Size = new System.Drawing.Size(10, 13);
+            this.lblSeperator.TabIndex = 10;
+            this.lblSeperator.Text = ":";
             // 
             // TimesConvertQuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.txtConvertHour);
+            this.Controls.Add(this.lblSeperator);
+            this.Controls.Add(this.cmbMinutes);
+            this.Controls.Add(this.cmbHours);
             this.Controls.Add(this.pbConvertHour);
             this.Name = "TimesConvertQuestionForm";
             this.Text = "TimesConvertQuestionForm";
@@ -72,7 +91,9 @@
             this.Controls.SetChildIndex(this.buttonSplitter, 0);
             this.Controls.SetChildIndex(this.btnNext, 0);
             this.Controls.SetChildIndex(this.lblPartNum, 0);
-            this.Controls.SetChildIndex(this.txtConvertHour, 0);
+            this.Controls.SetChildIndex(this.cmbHours, 0);
+            this.Controls.SetChildIndex(this.cmbMinutes, 0);
+            this.Controls.SetChildIndex(this.lblSeperator, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbConvertHour)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -82,7 +103,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbConvertHour;
-        private UserControls.MandatoryTextBox txtConvertHour;
+        private MandatoryComboBox cmbHours;
+        private MandatoryComboBox cmbMinutes;
+        private System.Windows.Forms.Label lblSeperator;
 
     }
 }

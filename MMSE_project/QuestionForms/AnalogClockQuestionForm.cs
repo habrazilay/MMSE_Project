@@ -20,6 +20,7 @@ namespace MMSE_project.QuestionForms
 
         #endregion
 
+
         #region Methods
 
         public AnalogClockQuestionForm()
@@ -35,12 +36,18 @@ namespace MMSE_project.QuestionForms
             // Setting a analog clock image in the picture Box
 
             pbAnalogClockImg.Image = randomClockImages[0];
-
+            FillComboBoxData();
             base.ChangeButtonTextToFinish();
         }
 
-        // Initialize the analog clocks images 
 
+        private void FillComboBoxData()
+        {
+
+        }
+
+
+        // Initialize the analog clocks images 
         private void InitAllClockImages()
         {
 
@@ -116,8 +123,10 @@ namespace MMSE_project.QuestionForms
         {
             bool returnValue = true;
 
-            txtClockTime.MandatoryMessageVisibility(txtClockTime.FieldText == string.Empty);
-            if (txtClockTime.FieldText == string.Empty)
+            cmbMinutes.MandatoryMessageVisibility(cmbMinutes.SelectedItem == null);
+            cmbHours.MandatoryMessageVisibility(cmbHours.SelectedItem == null);
+
+            if (cmbMinutes.SelectedItem == null || cmbHours.SelectedItem == null)
                 returnValue = false;
 
             return returnValue;
@@ -139,13 +148,13 @@ namespace MMSE_project.QuestionForms
         {
             double score = 0;
 
-            foreach (string clockImage in randomImagesNames)
+       /*     foreach (string clockImage in randomImagesNames)
             {
                 if (SpellingCheck.EqualsIgnoringMisspellings(clockImage, txtClockTime.FieldText))
                 {
                     score++;
                 }
-            }
+            }*/
             
             return score;
         }

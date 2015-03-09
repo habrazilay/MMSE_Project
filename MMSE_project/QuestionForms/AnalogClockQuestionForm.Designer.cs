@@ -29,21 +29,11 @@
         private void InitializeComponent()
         {
             this.pbAnalogClockImg = new System.Windows.Forms.PictureBox();
-            this.txtClockTime = new MMSE_project.UserControls.MandatoryTextBox();
+            this.lblSeperator = new System.Windows.Forms.Label();
+            this.cmbMinutes = new MMSE_project.QuestionForms.MandatoryComboBox();
+            this.cmbHours = new MMSE_project.QuestionForms.MandatoryComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalogClockImg)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnNext
-            // 
-            this.btnNext.Location = new System.Drawing.Point(250, 405);
-            // 
-            // titleSplitter
-            // 
-            this.titleSplitter.Size = new System.Drawing.Size(584, 80);
-            // 
-            // buttonSplitter
-            // 
-            this.buttonSplitter.Size = new System.Drawing.Size(584, 80);
             // 
             // pbAnalogClockImg
             // 
@@ -54,32 +44,51 @@
             this.pbAnalogClockImg.TabIndex = 7;
             this.pbAnalogClockImg.TabStop = false;
             // 
-            // txtClockTime
+            // lblSeperator
             // 
-            this.txtClockTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtClockTime.FieldText = "";
-            this.txtClockTime.Location = new System.Drawing.Point(250, 340);
-            this.txtClockTime.Name = "txtClockTime";
-            this.txtClockTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtClockTime.Size = new System.Drawing.Size(86, 21);
-            this.txtClockTime.TabIndex = 8;
+            this.lblSeperator.AutoSize = true;
+            this.lblSeperator.Location = new System.Drawing.Point(272, 336);
+            this.lblSeperator.Name = "lblSeperator";
+            this.lblSeperator.Size = new System.Drawing.Size(10, 13);
+            this.lblSeperator.TabIndex = 13;
+            this.lblSeperator.Text = ":";
+            // 
+            // cmbMinutes
+            // 
+            this.cmbMinutes.DropDownHeight = 106;
+            this.cmbMinutes.Location = new System.Drawing.Point(101, 332);
+            this.cmbMinutes.Name = "cmbMinutes";
+            this.cmbMinutes.Size = new System.Drawing.Size(150, 44);
+            this.cmbMinutes.TabIndex = 12;
+            // 
+            // cmbHours
+            // 
+            this.cmbHours.DropDownHeight = 106;
+            this.cmbHours.Location = new System.Drawing.Point(232, 332);
+            this.cmbHours.Name = "cmbHours";
+            this.cmbHours.Size = new System.Drawing.Size(150, 44);
+            this.cmbHours.TabIndex = 11;
             // 
             // AnalogClockQuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 462);
-            this.Controls.Add(this.txtClockTime);
+            this.Controls.Add(this.lblSeperator);
+            this.Controls.Add(this.cmbMinutes);
+            this.Controls.Add(this.cmbHours);
             this.Controls.Add(this.pbAnalogClockImg);
             this.Name = "AnalogClockQuestionForm";
             this.Text = this.Text;
             this.Controls.SetChildIndex(this.pbAnalogClockImg, 0);
-            this.Controls.SetChildIndex(this.txtClockTime, 0);
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);
             this.Controls.SetChildIndex(this.buttonSplitter, 0);
             this.Controls.SetChildIndex(this.btnNext, 0);
             this.Controls.SetChildIndex(this.lblPartNum, 0);
+            this.Controls.SetChildIndex(this.cmbHours, 0);
+            this.Controls.SetChildIndex(this.cmbMinutes, 0);
+            this.Controls.SetChildIndex(this.lblSeperator, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalogClockImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -89,6 +98,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbAnalogClockImg;
-        private UserControls.MandatoryTextBox txtClockTime;
+        private System.Windows.Forms.Label lblSeperator;
+        private MandatoryComboBox cmbMinutes;
+        private MandatoryComboBox cmbHours;
     }
 }

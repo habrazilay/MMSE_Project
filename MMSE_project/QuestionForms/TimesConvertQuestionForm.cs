@@ -20,6 +20,8 @@ namespace MMSE_project.QuestionForms
         private List<string> randomImagesNames = new List<string>();
 
         #endregion
+
+
         #region Methods
 
         public TimesConvertQuestionForm()
@@ -36,7 +38,15 @@ namespace MMSE_project.QuestionForms
             // Setting an hour image in the picture Box
 
             pbConvertHour.Image = randomHourImages[0];
+            FillComboBoxData();
         }
+
+
+        private void FillComboBoxData()
+        {
+
+        }
+
 
         private void InitAllHourImages()
         {
@@ -95,8 +105,10 @@ namespace MMSE_project.QuestionForms
         {
             bool returnValue = true;
 
-            txtConvertHour.MandatoryMessageVisibility(txtConvertHour.FieldText == string.Empty);
-            if (txtConvertHour.FieldText == string.Empty)
+            cmbMinutes.MandatoryMessageVisibility(cmbMinutes.SelectedItem == null);
+            cmbHours.MandatoryMessageVisibility(cmbHours.SelectedItem == null);
+
+            if (cmbMinutes.SelectedItem == null || cmbHours.SelectedItem == null)
                 returnValue = false;
 
 
@@ -121,10 +133,10 @@ namespace MMSE_project.QuestionForms
 
             foreach (string hourImage in randomImagesNames)
             {
-                if (SpellingCheck.EqualsIgnoringMisspellings(hourImage, txtConvertHour.FieldText))
-                {
+           //     if (SpellingCheck.EqualsIgnoringMisspellings(hourImage, txtConvertHour.FieldText))
+            //    {
                     score++;
-                }
+            //    }
             }
             
             return score;
