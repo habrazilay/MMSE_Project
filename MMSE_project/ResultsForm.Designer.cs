@@ -58,7 +58,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(220, 88);
+            this.lblTitle.Location = new System.Drawing.Point(146, 103);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(282, 42);
             this.lblTitle.TabIndex = 2;
@@ -67,7 +67,7 @@
             // btnBackToManu
             // 
             this.btnBackToManu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnBackToManu.Location = new System.Drawing.Point(276, 305);
+            this.btnBackToManu.Location = new System.Drawing.Point(210, 410);
             this.btnBackToManu.Name = "btnBackToManu";
             this.btnBackToManu.Size = new System.Drawing.Size(161, 40);
             this.btnBackToManu.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 462);
+            this.ClientSize = new System.Drawing.Size(584, 462);
             this.Controls.Add(this.btnBackToManu);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblTime);

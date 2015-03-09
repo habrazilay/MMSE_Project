@@ -44,7 +44,15 @@ namespace MMSE_project.QuestionForms
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(431, 404);
+            this.btnNext.Location = new System.Drawing.Point(250, 405);
+            // 
+            // titleSplitter
+            // 
+            this.titleSplitter.Size = new System.Drawing.Size(584, 80);
+            // 
+            // buttonSplitter
+            // 
+            this.buttonSplitter.Size = new System.Drawing.Size(584, 80);
             // 
             // tlpNounsPanel
             // 
@@ -66,14 +74,14 @@ namespace MMSE_project.QuestionForms
             this.tlpNounsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpNounsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpNounsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpNounsPanel.Size = new System.Drawing.Size(984, 301);
+            this.tlpNounsPanel.Size = new System.Drawing.Size(584, 302);
             this.tlpNounsPanel.TabIndex = 7;
             // 
             // txtThrdNoun
             // 
             this.txtThrdNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtThrdNoun.FieldText = "";
-            this.txtThrdNoun.Location = new System.Drawing.Point(266, 239);
+            this.txtThrdNoun.Location = new System.Drawing.Point(66, 239);
             this.txtThrdNoun.Name = "txtThrdNoun";
             this.txtThrdNoun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtThrdNoun.Size = new System.Drawing.Size(223, 23);
@@ -83,7 +91,7 @@ namespace MMSE_project.QuestionForms
             // 
             this.txtSecondNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtSecondNoun.FieldText = "";
-            this.txtSecondNoun.Location = new System.Drawing.Point(266, 139);
+            this.txtSecondNoun.Location = new System.Drawing.Point(66, 139);
             this.txtSecondNoun.Name = "txtSecondNoun";
             this.txtSecondNoun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSecondNoun.Size = new System.Drawing.Size(223, 22);
@@ -92,7 +100,7 @@ namespace MMSE_project.QuestionForms
             // pbSecondNounImage
             // 
             this.pbSecondNounImage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pbSecondNounImage.Location = new System.Drawing.Point(495, 103);
+            this.pbSecondNounImage.Location = new System.Drawing.Point(295, 103);
             this.pbSecondNounImage.Name = "pbSecondNounImage";
             this.pbSecondNounImage.Size = new System.Drawing.Size(125, 94);
             this.pbSecondNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,9 +110,9 @@ namespace MMSE_project.QuestionForms
             // pbThirdNounImage
             // 
             this.pbThirdNounImage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pbThirdNounImage.Location = new System.Drawing.Point(495, 203);
+            this.pbThirdNounImage.Location = new System.Drawing.Point(295, 203);
             this.pbThirdNounImage.Name = "pbThirdNounImage";
-            this.pbThirdNounImage.Size = new System.Drawing.Size(125, 95);
+            this.pbThirdNounImage.Size = new System.Drawing.Size(125, 96);
             this.pbThirdNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbThirdNounImage.TabIndex = 8;
             this.pbThirdNounImage.TabStop = false;
@@ -112,7 +120,7 @@ namespace MMSE_project.QuestionForms
             // pbFirstNounImage
             // 
             this.pbFirstNounImage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pbFirstNounImage.Location = new System.Drawing.Point(495, 3);
+            this.pbFirstNounImage.Location = new System.Drawing.Point(295, 3);
             this.pbFirstNounImage.Name = "pbFirstNounImage";
             this.pbFirstNounImage.Size = new System.Drawing.Size(125, 94);
             this.pbFirstNounImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,7 +131,7 @@ namespace MMSE_project.QuestionForms
             // 
             this.txtFirstNoun.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtFirstNoun.FieldText = "";
-            this.txtFirstNoun.Location = new System.Drawing.Point(266, 39);
+            this.txtFirstNoun.Location = new System.Drawing.Point(66, 39);
             this.txtFirstNoun.Name = "txtFirstNoun";
             this.txtFirstNoun.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtFirstNoun.Size = new System.Drawing.Size(223, 21);
@@ -133,7 +141,7 @@ namespace MMSE_project.QuestionForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(584, 462);
             this.Controls.Add(this.tlpNounsPanel);
             this.Name = "NounImagesQuestionForm";
             this.Text = this.Text;

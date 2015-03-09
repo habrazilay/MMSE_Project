@@ -90,9 +90,5 @@ namespace MMSE_project
             }
         }
 
-        private void pbBrain_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

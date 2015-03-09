@@ -33,6 +33,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbConvertHour)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(250, 405);
+            // 
+            // titleSplitter
+            // 
+            this.titleSplitter.Size = new System.Drawing.Size(584, 80);
+            // 
+            // buttonSplitter
+            // 
+            this.buttonSplitter.Location = new System.Drawing.Point(0, 381);
+            this.buttonSplitter.Size = new System.Drawing.Size(584, 80);
+            // 
             // pbConvertHour
             // 
             this.pbConvertHour.Location = new System.Drawing.Point(0, 181);
@@ -46,7 +59,7 @@
             // 
             this.txtConvertHour.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtConvertHour.FieldText = "";
-            this.txtConvertHour.Location = new System.Drawing.Point(431, 331);
+            this.txtConvertHour.Location = new System.Drawing.Point(250, 331);
             this.txtConvertHour.Name = "txtConvertHour";
             this.txtConvertHour.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtConvertHour.Size = new System.Drawing.Size(86, 21);
@@ -56,9 +69,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.txtConvertHour);
             this.Controls.Add(this.pbConvertHour);
+            this.MaximumSize = new System.Drawing.Size(600, 500);
             this.Name = "TimesConvertQuestionForm";
             this.Text = "TimesConvertQuestionForm";
             this.Controls.SetChildIndex(this.pbConvertHour, 0);

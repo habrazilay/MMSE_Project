@@ -33,9 +33,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalogClockImg)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(250, 405);
+            // 
+            // titleSplitter
+            // 
+            this.titleSplitter.Size = new System.Drawing.Size(584, 80);
+            // 
+            // buttonSplitter
+            // 
+            this.buttonSplitter.Size = new System.Drawing.Size(584, 80);
+            // 
             // pbAnalogClockImg
             // 
-            this.pbAnalogClockImg.Location = new System.Drawing.Point(367, 112);
+            this.pbAnalogClockImg.Location = new System.Drawing.Point(165, 109);
             this.pbAnalogClockImg.Name = "pbAnalogClockImg";
             this.pbAnalogClockImg.Size = new System.Drawing.Size(216, 208);
             this.pbAnalogClockImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -46,7 +58,7 @@
             // 
             this.txtClockTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtClockTime.FieldText = "";
-            this.txtClockTime.Location = new System.Drawing.Point(431, 340);
+            this.txtClockTime.Location = new System.Drawing.Point(250, 340);
             this.txtClockTime.Name = "txtClockTime";
             this.txtClockTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtClockTime.Size = new System.Drawing.Size(86, 21);
@@ -56,18 +68,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(584, 462);
             this.Controls.Add(this.txtClockTime);
             this.Controls.Add(this.pbAnalogClockImg);
             this.Name = "AnalogClockQuestionForm";
             this.Text = this.Text;
+            this.Controls.SetChildIndex(this.pbAnalogClockImg, 0);
+            this.Controls.SetChildIndex(this.txtClockTime, 0);
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);
             this.Controls.SetChildIndex(this.buttonSplitter, 0);
             this.Controls.SetChildIndex(this.btnNext, 0);
             this.Controls.SetChildIndex(this.lblPartNum, 0);
-            this.Controls.SetChildIndex(this.pbAnalogClockImg, 0);
-            this.Controls.SetChildIndex(this.txtClockTime, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalogClockImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

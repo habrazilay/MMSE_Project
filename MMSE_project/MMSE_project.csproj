@@ -296,36 +296,6 @@
     <None Include="Images\AnalogClocks\1230.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Hours\0030.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\0135.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\0515.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\0715.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\1030.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\1320.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\1510.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\1830.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\2050.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\2115.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\Hours\h0135.png" />
   </ItemGroup>
   <ItemGroup>

@@ -35,11 +35,19 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(431, 404);
+            this.btnNext.Location = new System.Drawing.Point(250, 405);
+            // 
+            // titleSplitter
+            // 
+            this.titleSplitter.Size = new System.Drawing.Size(584, 80);
+            // 
+            // buttonSplitter
+            // 
+            this.buttonSplitter.Size = new System.Drawing.Size(584, 80);
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(538, 199);
+            this.btnCalculate.Location = new System.Drawing.Point(402, 199);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(118, 23);
             this.btnCalculate.TabIndex = 7;
@@ -50,7 +58,7 @@
             // lblQuestion
             // 
             this.lblQuestion.AutoSize = true;
-            this.lblQuestion.Location = new System.Drawing.Point(244, 199);
+            this.lblQuestion.Location = new System.Drawing.Point(81, 199);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(49, 13);
             this.lblQuestion.TabIndex = 9;
@@ -59,8 +67,9 @@
             // txtResult
             // 
             this.txtResult.FieldText = "";
-            this.txtResult.Location = new System.Drawing.Point(299, 199);
+            this.txtResult.Location = new System.Drawing.Point(136, 199);
             this.txtResult.Name = "txtResult";
+            this.txtResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtResult.Size = new System.Drawing.Size(233, 83);
             this.txtResult.TabIndex = 10;
             // 
@@ -68,12 +77,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(584, 462);
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.lblQuestion);
             this.Controls.Add(this.btnCalculate);
             this.Name = "MathQuestionForm";
-            this.Text = base.Text;
+            this.Text = this.Text;
             this.Controls.SetChildIndex(this.titleSplitter, 0);
             this.Controls.SetChildIndex(this.lblTitle, 0);
             this.Controls.SetChildIndex(this.buttonSplitter, 0);

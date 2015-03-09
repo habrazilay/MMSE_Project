@@ -38,7 +38,7 @@
             // btnNext
             // 
             this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNext.Location = new System.Drawing.Point(431, 405);
+            this.btnNext.Location = new System.Drawing.Point(250, 405);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(86, 27);
             this.btnNext.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.titleSplitter.Dock = System.Windows.Forms.DockStyle.Top;
             this.titleSplitter.Location = new System.Drawing.Point(0, 0);
             this.titleSplitter.Name = "titleSplitter";
-            this.titleSplitter.Size = new System.Drawing.Size(984, 80);
+            this.titleSplitter.Size = new System.Drawing.Size(584, 80);
             this.titleSplitter.TabIndex = 3;
             this.titleSplitter.TabStop = false;
             // 
@@ -74,7 +74,7 @@
             this.buttonSplitter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonSplitter.Location = new System.Drawing.Point(0, 382);
             this.buttonSplitter.Name = "buttonSplitter";
-            this.buttonSplitter.Size = new System.Drawing.Size(984, 80);
+            this.buttonSplitter.Size = new System.Drawing.Size(584, 80);
             this.buttonSplitter.TabIndex = 5;
             this.buttonSplitter.TabStop = false;
             // 
@@ -95,13 +95,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 462);
+            this.ClientSize = new System.Drawing.Size(584, 462);
             this.Controls.Add(this.lblPartNum);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.buttonSplitter);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.titleSplitter);
-            this.MaximumSize = new System.Drawing.Size(1000, 500);
+            this.MaximumSize = new System.Drawing.Size(600, 500);
             this.Name = "QuestionForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
