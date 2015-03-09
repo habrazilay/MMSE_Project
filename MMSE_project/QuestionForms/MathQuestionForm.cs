@@ -27,7 +27,7 @@ namespace MMSE_project.QuestionForms
 
         public MathQuestionForm()
         {
-            base.QuestionTitle = "אאנא ענה על השאלה החישובית הבאה:";
+            base.QuestionTitle = "אנא ענה על השאלה החישובית הבאה:";
             base.PartNumber = "6";
 
             InitializeComponent();
