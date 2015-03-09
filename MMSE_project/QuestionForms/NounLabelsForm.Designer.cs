@@ -132,6 +132,7 @@
             this.Name = "NounLabelsForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "מבחן הסוללה הנוירו-קוגניטיבית הממוחשבת";
             this.pnlNoun.ResumeLayout(false);
             this.pnlNoun.PerformLayout();
