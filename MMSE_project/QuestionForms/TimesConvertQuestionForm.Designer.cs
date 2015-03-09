@@ -33,24 +33,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbConvertHour)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnNext
-            // 
-            this.btnNext.Location = new System.Drawing.Point(250, 405);
-            // 
-            // titleSplitter
-            // 
-            this.titleSplitter.Size = new System.Drawing.Size(584, 80);
-            // 
             // buttonSplitter
             // 
             this.buttonSplitter.Location = new System.Drawing.Point(0, 381);
-            this.buttonSplitter.Size = new System.Drawing.Size(584, 80);
             // 
             // pbConvertHour
             // 
-            this.pbConvertHour.Location = new System.Drawing.Point(0, 181);
+            this.pbConvertHour.Image = global::MMSE_project.Properties.Resources.h0030;
+            this.pbConvertHour.Location = new System.Drawing.Point(0, 172);
             this.pbConvertHour.Name = "pbConvertHour";
-            this.pbConvertHour.Size = new System.Drawing.Size(984, 92);
+            this.pbConvertHour.Size = new System.Drawing.Size(584, 118);
             this.pbConvertHour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbConvertHour.TabIndex = 7;
             this.pbConvertHour.TabStop = false;
@@ -72,7 +64,6 @@
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.txtConvertHour);
             this.Controls.Add(this.pbConvertHour);
-            this.MaximumSize = new System.Drawing.Size(600, 500);
             this.Name = "TimesConvertQuestionForm";
             this.Text = "TimesConvertQuestionForm";
             this.Controls.SetChildIndex(this.pbConvertHour, 0);
