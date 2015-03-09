@@ -18,6 +18,12 @@ namespace MMSE_project.QuestionForms
         private List<Image> randomClockImages = new List<Image>();
         private List<string> randomImagesNames = new List<string>();
 
+        private const int FIRST_HOUR = 00;
+        private const int LAST_HOUR = 23;
+        private const int FIRST_MIN = 00;
+        private const int LAST_MIN = 55;
+
+
         #endregion
 
 
@@ -43,7 +49,16 @@ namespace MMSE_project.QuestionForms
 
         private void FillComboBoxData()
         {
-
+            // Adding all default hours to cmbHours
+            for (int hours = FIRST_HOUR; hours <= LAST_HOUR; hours++)
+            {
+                cmbHours.Items.Add(hours.ToString());
+            }
+            // Adding all default minutes to cmbMinutes
+            for (int minutes = FIRST_MIN; minutes <= LAST_MIN; minutes=minutes+5)
+            {
+                cmbMinutes.Items.Add(minutes.ToString());
+            }
         }
 
 
@@ -129,6 +144,7 @@ namespace MMSE_project.QuestionForms
             if (cmbMinutes.SelectedItem == null || cmbHours.SelectedItem == null)
                 returnValue = false;
 
+
             return returnValue;
 
         }
@@ -148,13 +164,13 @@ namespace MMSE_project.QuestionForms
         {
             double score = 0;
 
-       /*     foreach (string clockImage in randomImagesNames)
+            // Check if hour entered is correct according to the analog clock presented
+            foreach (string hour in NounManagment.GetNounsList())
+            if (cmbHours.SelectedItem.ToString()+cmbMinutes.SelectedItem.ToString() == hour)
             {
-                if (SpellingCheck.EqualsIgnoringMisspellings(clockImage, txtClockTime.FieldText))
-                {
-                    score++;
-                }
-            }*/
+                score++;
+            }
+
             
             return score;
         }

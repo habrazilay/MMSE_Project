@@ -56,9 +56,9 @@
             // cmbMinutes
             // 
             this.cmbMinutes.DropDownHeight = 106;
-            this.cmbMinutes.Location = new System.Drawing.Point(101, 332);
+            this.cmbMinutes.Location = new System.Drawing.Point(135, 336);
             this.cmbMinutes.Name = "cmbMinutes";
-            this.cmbMinutes.Size = new System.Drawing.Size(150, 44);
+            this.cmbMinutes.Size = new System.Drawing.Size(120, 44);
             this.cmbMinutes.TabIndex = 12;
             // 
             // cmbHours
