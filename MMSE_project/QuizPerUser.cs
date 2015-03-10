@@ -27,7 +27,7 @@ namespace MMSE_project
             get
             {
                 totalQuizScore = 0;
-                foreach (QuestionResult questionResult in questionsResultsList)
+                foreach (QuestionResult questionResult in QuestionsResultsList)
                 {
                     totalQuizScore = totalQuizScore + questionResult.Score;
                 }
@@ -55,7 +55,7 @@ namespace MMSE_project
         {
             get
             {
-                foreach (QuestionResult questionResult in questionsResultsList)
+                foreach (QuestionResult questionResult in QuestionsResultsList)
                 {
                     totalQuizTime = totalQuizTime + questionResult.TimeToQuestion;
                 }
@@ -93,18 +93,18 @@ namespace MMSE_project
         {
             string quesetionsData = string.Empty;
 
-            foreach (QuestionResult qr in questionsResultsList)
+            foreach (QuestionResult qr in QuestionsResultsList)
 	        {
-		        quesetionsData = quesetionsData + qr.QuestionNumber.ToString() + "|" +
-                                                  qr.Score.ToString() + "|" +
-                                                  qr.TimeToQuestion.ToString();
+		        quesetionsData = quesetionsData + "|" + qr.QuestionNumber.ToString() + "|" +
+                                                        qr.Score.ToString() + "|" +
+                                                        qr.TimeToQuestion.ToString();
 	        }
 
             string line =   quizStartTime.Date.ToString() + "|" +
                             quizStartTime.TimeOfDay.ToString() + "|" +
                             currUserID.ToString() + "|" +
                             TotalQuizScore.ToString() + "|" +
-                            TotalQuizTime.ToString() + "|" +
+                            TotalQuizTime.ToString() +
                             quesetionsData;
 
             FilesManagment.WriteLineToFile(line);
