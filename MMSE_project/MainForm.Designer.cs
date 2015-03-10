@@ -47,7 +47,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Ravie", 25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.Location = new System.Drawing.Point(182, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(209, 45);
+            this.lblTitle.Size = new System.Drawing.Size(162, 45);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "ברוך הבא!";
             // 
@@ -69,9 +69,9 @@
             this.pbBrain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbBrain.Cursor = System.Windows.Forms.Cursors.Default;
             this.pbBrain.Image = ((System.Drawing.Image)(resources.GetObject("pbBrain.Image")));
-            this.pbBrain.Location = new System.Drawing.Point(190, 79);
+            this.pbBrain.Location = new System.Drawing.Point(163, 79);
             this.pbBrain.Name = "pbBrain";
-            this.pbBrain.Size = new System.Drawing.Size(200, 187);
+            this.pbBrain.Size = new System.Drawing.Size(237, 187);
             this.pbBrain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBrain.TabIndex = 2;
             this.pbBrain.TabStop = false;
