@@ -151,13 +151,10 @@ namespace MMSE_project.QuestionForms
             string selectedHour = hoursBox.SelectedItem.ToString() + minutesBox.SelectedItem.ToString();
 
             foreach (string hourImage in randomImagesNames)
-            {
                 if (selectedHour == hourImage)
                 {
                     score++;
-                }           
-            }
-            
+                }                       
             return score;
         }
 
