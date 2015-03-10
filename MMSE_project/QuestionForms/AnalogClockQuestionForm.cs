@@ -34,7 +34,7 @@ namespace MMSE_project.QuestionForms
             InitAllClockImages();
             RandomClockImages();
 
-            base.QuestionTitle = "על המסך מוצג שעון אנלוגי.\r\nעליך לכתוב את השעה המוצגת על המסך (במתכונת של 12 שעות).";
+            base.QuestionTitle = "בחר/י במספרים את השעה והדקות המוצגות בשעון האנלוגי\r\n (במתכונת של 12 שעות).";
             base.PartNumber = "8";
 
             InitializeComponent();
@@ -170,7 +170,7 @@ namespace MMSE_project.QuestionForms
             string selectedHour = hoursBox.SelectedItem.ToString()+minutesBox.SelectedItem.ToString();
             // Check if hour entered is correct according to the analog clock presented
             foreach (string clockHour in randomImagesNames)
-                if (selectedHour == clockHour)
+                if (selectedHour == clockHour )
             {
                 score++;
             }

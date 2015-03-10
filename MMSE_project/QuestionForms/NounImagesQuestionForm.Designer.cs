@@ -42,17 +42,10 @@ namespace MMSE_project.QuestionForms
             ((System.ComponentModel.ISupportInitialize)(this.pbFirstNounImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnNext
+            // lblTitle
             // 
-            this.btnNext.Location = new System.Drawing.Point(250, 405);
-            // 
-            // titleSplitter
-            // 
-            this.titleSplitter.Size = new System.Drawing.Size(584, 80);
-            // 
-            // buttonSplitter
-            // 
-            this.buttonSplitter.Size = new System.Drawing.Size(584, 80);
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tlpNounsPanel
             // 

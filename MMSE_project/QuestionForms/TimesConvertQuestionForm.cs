@@ -35,7 +35,7 @@ namespace MMSE_project.QuestionForms
             InitAllHourImages();
             RandomHourImages();
 
-            base.QuestionTitle = "על המסך מוצגת שעה הכתובה בעברית\r\nעליך לכתוב את השעה המוצגת כקלט את השעה והדקות במספרים - במתוכנת של 24 שעות.";
+            base.QuestionTitle = "בחר/י את השעה והדקות במספרים המתאימה לשעה המוצגת במילים\r\nבמתוכנת של 24 שעות.";
             base.PartNumber = "7";
 
             InitializeComponent();

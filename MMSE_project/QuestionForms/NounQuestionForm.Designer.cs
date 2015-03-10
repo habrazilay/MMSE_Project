@@ -41,8 +41,10 @@ namespace MMSE_project.QuestionForms
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblTitle.Location = new System.Drawing.Point(12, 14);
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tlpNounsPanel
             // 

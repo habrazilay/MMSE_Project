@@ -35,6 +35,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbConvertHour)).BeginInit();
             this.SuspendLayout();
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            // 
             // buttonSplitter
             // 
             this.buttonSplitter.Location = new System.Drawing.Point(0, 381);

@@ -87,7 +87,8 @@
             this.Name = "ResultsForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "ResultsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ברוך הבא למבחן הסוללה הנוירו-קוגניטיבית הממוחשבת!";
             this.ResumeLayout(false);
             this.PerformLayout();
 

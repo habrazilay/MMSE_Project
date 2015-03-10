@@ -35,6 +35,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalogClockImg)).BeginInit();
             this.SuspendLayout();
             // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            // 
             // pbAnalogClockImg
             // 
             this.pbAnalogClockImg.Location = new System.Drawing.Point(165, 109);

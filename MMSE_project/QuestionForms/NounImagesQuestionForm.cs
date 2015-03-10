@@ -32,7 +32,7 @@ namespace MMSE_project.QuestionForms
             randomNounsImages();
 
             base.PartNumber = "4";
-            base.QuestionTitle = @"על המסך מופיעות שלוש תמונות של שמות עצם./r/nאנא מלא את שמות העצם בשדה הטקסט שלייד התמונה.";
+            base.QuestionTitle = @"אנא מלא את שמות העצם בשדה הטקסט שלייד התמונה.";
         
             InitializeComponent();
     
