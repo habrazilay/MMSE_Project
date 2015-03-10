@@ -30,8 +30,8 @@
         {
             this.pbAnalogClockImg = new System.Windows.Forms.PictureBox();
             this.lblSeperator = new System.Windows.Forms.Label();
-            this.cmbMinutes = new MMSE_project.QuestionForms.MandatoryComboBox();
-            this.cmbHours = new MMSE_project.QuestionForms.MandatoryComboBox();
+            this.minutesBox = new MMSE_project.QuestionForms.MandatoryComboBox();
+            this.hoursBox = new MMSE_project.QuestionForms.MandatoryComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalogClockImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,27 +47,27 @@
             // lblSeperator
             // 
             this.lblSeperator.AutoSize = true;
-            this.lblSeperator.Location = new System.Drawing.Point(272, 336);
+            this.lblSeperator.Location = new System.Drawing.Point(265, 336);
             this.lblSeperator.Name = "lblSeperator";
             this.lblSeperator.Size = new System.Drawing.Size(10, 13);
             this.lblSeperator.TabIndex = 13;
             this.lblSeperator.Text = ":";
             // 
-            // cmbMinutes
+            // minutesBox
             // 
-            this.cmbMinutes.DropDownHeight = 106;
-            this.cmbMinutes.Location = new System.Drawing.Point(135, 336);
-            this.cmbMinutes.Name = "cmbMinutes";
-            this.cmbMinutes.Size = new System.Drawing.Size(120, 44);
-            this.cmbMinutes.TabIndex = 12;
+            this.minutesBox.DropDownHeight = 106;
+            this.minutesBox.Location = new System.Drawing.Point(90, 336);
+            this.minutesBox.Name = "minutesBox";
+            this.minutesBox.Size = new System.Drawing.Size(150, 44);
+            this.minutesBox.TabIndex = 12;
             // 
-            // cmbHours
+            // hoursBox
             // 
-            this.cmbHours.DropDownHeight = 106;
-            this.cmbHours.Location = new System.Drawing.Point(232, 332);
-            this.cmbHours.Name = "cmbHours";
-            this.cmbHours.Size = new System.Drawing.Size(150, 44);
-            this.cmbHours.TabIndex = 11;
+            this.hoursBox.DropDownHeight = 106;
+            this.hoursBox.Location = new System.Drawing.Point(231, 336);
+            this.hoursBox.Name = "hoursBox";
+            this.hoursBox.Size = new System.Drawing.Size(150, 44);
+            this.hoursBox.TabIndex = 11;
             // 
             // AnalogClockQuestionForm
             // 
@@ -75,8 +75,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 462);
             this.Controls.Add(this.lblSeperator);
-            this.Controls.Add(this.cmbMinutes);
-            this.Controls.Add(this.cmbHours);
+            this.Controls.Add(this.minutesBox);
+            this.Controls.Add(this.hoursBox);
             this.Controls.Add(this.pbAnalogClockImg);
             this.Name = "AnalogClockQuestionForm";
             this.Text = this.Text;
@@ -86,8 +86,8 @@
             this.Controls.SetChildIndex(this.buttonSplitter, 0);
             this.Controls.SetChildIndex(this.btnNext, 0);
             this.Controls.SetChildIndex(this.lblPartNum, 0);
-            this.Controls.SetChildIndex(this.cmbHours, 0);
-            this.Controls.SetChildIndex(this.cmbMinutes, 0);
+            this.Controls.SetChildIndex(this.hoursBox, 0);
+            this.Controls.SetChildIndex(this.minutesBox, 0);
             this.Controls.SetChildIndex(this.lblSeperator, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnalogClockImg)).EndInit();
             this.ResumeLayout(false);
@@ -99,7 +99,7 @@
 
         private System.Windows.Forms.PictureBox pbAnalogClockImg;
         private System.Windows.Forms.Label lblSeperator;
-        private MandatoryComboBox cmbMinutes;
-        private MandatoryComboBox cmbHours;
+        private MandatoryComboBox minutesBox;
+        private MandatoryComboBox hoursBox;
     }
 }

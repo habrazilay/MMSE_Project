@@ -202,9 +202,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\Hours\h0030.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\Objects\Car.png" />
   </ItemGroup>
   <ItemGroup>
@@ -248,36 +245,6 @@
     <None Include="Images\Objects\sun.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\AnalogClocks\0155.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0235.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0300.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0445.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0450.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0525.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0605.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0715.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0845.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\AnalogClocks\0955.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\AnalogClocks\1010.png" />
   </ItemGroup>
   <ItemGroup>
@@ -294,15 +261,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\AnalogClocks\1230.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\h0135.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\h0515.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\Hours\h0715.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Hours\h1030.png" />
@@ -324,6 +282,48 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HistoryFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hours\h135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hours\h515.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hours\h715.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Hours\h2430.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\235.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\445.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\525.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\605.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\715.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\845.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\AnalogClocks\955.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

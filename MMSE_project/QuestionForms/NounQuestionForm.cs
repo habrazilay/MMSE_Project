@@ -16,7 +16,7 @@ namespace MMSE_project.QuestionForms
         {
             InitializeComponent();
             base.PartNumber = "5";
-            base.QuestionTitle = "אנא הכנס את שלושת שמות העצם שהתבקשת לזכור בחלק מספר 3 (סדר ההכנסה אינו משנה).";
+            base.QuestionTitle = @"אנא הכנס את שלושת שמות העצם\r\שהתבקשת לזכור בחלק מספר 3 (סדר ההכנסה אינו משנה).";
         }
 
         #region Ovveride Methods

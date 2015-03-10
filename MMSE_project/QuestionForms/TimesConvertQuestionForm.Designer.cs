@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.pbConvertHour = new System.Windows.Forms.PictureBox();
-            this.cmbHours = new MMSE_project.QuestionForms.MandatoryComboBox();
-            this.cmbMinutes = new MMSE_project.QuestionForms.MandatoryComboBox();
+            this.hoursBox = new MMSE_project.QuestionForms.MandatoryComboBox();
+            this.minutesBox = new MMSE_project.QuestionForms.MandatoryComboBox();
             this.lblSeperator = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbConvertHour)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +41,6 @@
             // 
             // pbConvertHour
             // 
-            this.pbConvertHour.Image = global::MMSE_project.Properties.Resources.h0030;
             this.pbConvertHour.Location = new System.Drawing.Point(0, 172);
             this.pbConvertHour.Name = "pbConvertHour";
             this.pbConvertHour.Size = new System.Drawing.Size(584, 118);
@@ -49,21 +48,21 @@
             this.pbConvertHour.TabIndex = 7;
             this.pbConvertHour.TabStop = false;
             // 
-            // cmbHours
+            // hoursBox
             // 
-            this.cmbHours.DropDownHeight = 106;
-            this.cmbHours.Location = new System.Drawing.Point(267, 314);
-            this.cmbHours.Name = "cmbHours";
-            this.cmbHours.Size = new System.Drawing.Size(150, 44);
-            this.cmbHours.TabIndex = 8;
+            this.hoursBox.DropDownHeight = 106;
+            this.hoursBox.Location = new System.Drawing.Point(267, 314);
+            this.hoursBox.Name = "hoursBox";
+            this.hoursBox.Size = new System.Drawing.Size(150, 44);
+            this.hoursBox.TabIndex = 8;
             // 
-            // cmbMinutes
+            // minutesBox
             // 
-            this.cmbMinutes.DropDownHeight = 106;
-            this.cmbMinutes.Location = new System.Drawing.Point(136, 314);
-            this.cmbMinutes.Name = "cmbMinutes";
-            this.cmbMinutes.Size = new System.Drawing.Size(150, 44);
-            this.cmbMinutes.TabIndex = 9;
+            this.minutesBox.DropDownHeight = 106;
+            this.minutesBox.Location = new System.Drawing.Point(136, 314);
+            this.minutesBox.Name = "minutesBox";
+            this.minutesBox.Size = new System.Drawing.Size(150, 44);
+            this.minutesBox.TabIndex = 9;
             // 
             // lblSeperator
             // 
@@ -80,8 +79,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.lblSeperator);
-            this.Controls.Add(this.cmbMinutes);
-            this.Controls.Add(this.cmbHours);
+            this.Controls.Add(this.minutesBox);
+            this.Controls.Add(this.hoursBox);
             this.Controls.Add(this.pbConvertHour);
             this.Name = "TimesConvertQuestionForm";
             this.Text = "TimesConvertQuestionForm";
@@ -91,8 +90,8 @@
             this.Controls.SetChildIndex(this.buttonSplitter, 0);
             this.Controls.SetChildIndex(this.btnNext, 0);
             this.Controls.SetChildIndex(this.lblPartNum, 0);
-            this.Controls.SetChildIndex(this.cmbHours, 0);
-            this.Controls.SetChildIndex(this.cmbMinutes, 0);
+            this.Controls.SetChildIndex(this.hoursBox, 0);
+            this.Controls.SetChildIndex(this.minutesBox, 0);
             this.Controls.SetChildIndex(this.lblSeperator, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbConvertHour)).EndInit();
             this.ResumeLayout(false);
@@ -103,8 +102,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbConvertHour;
-        private MandatoryComboBox cmbHours;
-        private MandatoryComboBox cmbMinutes;
+        private MandatoryComboBox hoursBox;
+        private MandatoryComboBox minutesBox;
         private System.Windows.Forms.Label lblSeperator;
 
     }

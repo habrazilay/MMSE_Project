@@ -19,6 +19,11 @@ namespace MMSE_project.QuestionForms
         private List<Image> randomHourImages = new List<Image>();
         private List<string> randomImagesNames = new List<string>();
 
+        private const int FIRST_HOUR = 1;
+        private const int LAST_HOUR = 24;
+        private const int FIRST_MIN = 10;
+        private const int LAST_MIN = 55;
+
         #endregion
 
 
@@ -40,28 +45,41 @@ namespace MMSE_project.QuestionForms
             pbConvertHour.Image = randomHourImages[0];
             FillComboBoxData();
         }
-
-
+        /// <summary>
+        /// Fill hours and minutes combo boxes.
+        /// </summary>
         private void FillComboBoxData()
         {
-
+            // Adding all default hours to hoursBox
+            for (int hours = FIRST_HOUR; hours <= LAST_HOUR; hours++)
+            {
+                hoursBox.Items.Add(hours.ToString());
+            }
+            // Adding all default minutes to minutesBox
+            minutesBox.Items.Add("00");
+            minutesBox.Items.Add("05");
+            for (int minutes = FIRST_MIN; minutes <= LAST_MIN; minutes = minutes + 5)
+            {
+                minutesBox.Items.Add(minutes.ToString());
+            }
+        
         }
 
 
         private void InitAllHourImages()
         {
 
-            allHourImages.Add(Properties.Resources.h0030);
-            allHourImages[0].Tag = "0030";
+            allHourImages.Add(Properties.Resources.h2430);
+            allHourImages[0].Tag = "2430";
 
-            allHourImages.Add(Properties.Resources.h0135);
-            allHourImages[1].Tag = "0135";
+            allHourImages.Add(Properties.Resources.h135);
+            allHourImages[1].Tag = "135";
 
-            allHourImages.Add(Properties.Resources.h0515);
-            allHourImages[2].Tag = "0515";
+            allHourImages.Add(Properties.Resources.h515);
+            allHourImages[2].Tag = "515";
 
-            allHourImages.Add(Properties.Resources.h0715);
-            allHourImages[3].Tag = "0715";
+            allHourImages.Add(Properties.Resources.h715);
+            allHourImages[3].Tag = "715";
 
             allHourImages.Add(Properties.Resources.h1030);
             allHourImages[4].Tag = "1030";
@@ -105,10 +123,10 @@ namespace MMSE_project.QuestionForms
         {
             bool returnValue = true;
 
-            cmbMinutes.MandatoryMessageVisibility(cmbMinutes.SelectedItem == null);
-            cmbHours.MandatoryMessageVisibility(cmbHours.SelectedItem == null);
+            minutesBox.MandatoryMessageVisibility(minutesBox.SelectedItem == null);
+            hoursBox.MandatoryMessageVisibility(hoursBox.SelectedItem == null);
 
-            if (cmbMinutes.SelectedItem == null || cmbHours.SelectedItem == null)
+            if (minutesBox.SelectedItem == null || hoursBox.SelectedItem == null)
                 returnValue = false;
 
 
@@ -130,13 +148,14 @@ namespace MMSE_project.QuestionForms
         public override double CheckAnswers()
         {
             double score = 0;
+            string selectedHour = hoursBox.SelectedItem.ToString() + minutesBox.SelectedItem.ToString();
 
             foreach (string hourImage in randomImagesNames)
             {
-           //     if (SpellingCheck.EqualsIgnoringMisspellings(hourImage, txtConvertHour.FieldText))
-            //    {
+                if (selectedHour == hourImage)
+                {
                     score++;
-            //    }
+                }           
             }
             
             return score;
