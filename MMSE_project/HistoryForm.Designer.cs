@@ -100,18 +100,21 @@
             this.dateColumn.HeaderText = "תאריך";
             this.dateColumn.Name = "dateColumn";
             this.dateColumn.ReadOnly = true;
+            this.dateColumn.Width = 200;
             // 
             // scoreColumn
             // 
             this.scoreColumn.HeaderText = "ציון סופי";
             this.scoreColumn.Name = "scoreColumn";
             this.scoreColumn.ReadOnly = true;
+            this.scoreColumn.Width = 180;
             // 
             // totalTimeColumn
             // 
             this.totalTimeColumn.HeaderText = "זמן כולל";
             this.totalTimeColumn.Name = "totalTimeColumn";
             this.totalTimeColumn.ReadOnly = true;
+            this.totalTimeColumn.Width = 200;
             // 
             // HistoryForm
             // 
@@ -121,7 +124,6 @@
             this.Controls.Add(this.tlpHistory);
             this.Name = "HistoryForm";
             this.Text = "היסטורית תוצאות עבור משתמש";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.HistoryForm_Load);
             this.tlpHistory.ResumeLayout(false);
             this.tlpHistory.PerformLayout();

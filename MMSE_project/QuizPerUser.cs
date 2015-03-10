@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MMSE_project
 {
-    class QuizPerUser
+    static class QuizPerUser
     {
         #region Data members
 
@@ -100,8 +100,7 @@ namespace MMSE_project
                                                         qr.TimeToQuestion.ToString();
 	        }
 
-            string line =   quizStartTime.Date.ToString() + "|" +
-                            quizStartTime.TimeOfDay.ToString() + "|" +
+            string line =   quizStartTime.ToString() + "|" +
                             currUserID.ToString() + "|" +
                             TotalQuizScore.ToString() + "|" +
                             TotalQuizTime.ToString() +

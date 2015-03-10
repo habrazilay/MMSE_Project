@@ -37,7 +37,7 @@ namespace MMSE_project
             }
             else
             {
-               textStreamWriter = new StreamWriter(filePath, true);
+                textStreamWriter = new StreamWriter(filePath, true);
             }
         }
 

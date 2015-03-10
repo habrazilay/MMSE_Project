@@ -34,7 +34,7 @@ namespace MMSE_project
             foreach (string line in userHistoryLines)
             {
                  string[] column = line.Split('|');
-                 grdHistory.Rows.Add(column[0], column[3], column[4]);
+                 grdHistory.Rows.Add(column[0], column[2], column[3]);
             }
         }
     }
