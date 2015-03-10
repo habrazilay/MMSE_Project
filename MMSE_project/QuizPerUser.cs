@@ -100,12 +100,14 @@ namespace MMSE_project
                                                   qr.TimeToQuestion.ToString();
 	        }
 
-            FilesManagment.WriteLineToFile(quizStartTime.Date.ToString() + "|" +
-                                           quizStartTime.TimeOfDay.ToString() + "|" +
-                                           currUserID.ToString() + "|" +
-                                           totalQuizScore.ToString() + "|" +
-                                           totalQuizTime.ToString() + "|" +
-                                           quesetionsData);
+            string line =   quizStartTime.Date.ToString() + "|" +
+                            quizStartTime.TimeOfDay.ToString() + "|" +
+                            currUserID.ToString() + "|" +
+                            TotalQuizScore.ToString() + "|" +
+                            TotalQuizTime.ToString() + "|" +
+                            quesetionsData;
+
+            FilesManagment.WriteLineToFile(line);
 
         }
 

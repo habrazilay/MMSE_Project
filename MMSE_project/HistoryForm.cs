@@ -24,5 +24,18 @@ namespace MMSE_project
         {
             this.Close();
         }
+
+        private void HistoryForm_Load(object sender, EventArgs e)
+        {
+            List<string> userHistoryLines = new List<string>();
+            
+            userHistoryLines = FilesManagment.ReadAllLines(userId);
+
+            foreach (string line in userHistoryLines)
+            {
+                 string[] column = line.Split('|');
+                 grdHistory.Rows.Add(column[0], column[3], column[4]);
+            }
+        }
     }
 }
